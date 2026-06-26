@@ -1,0 +1,132 @@
+<!-- @dsCard group="Applications" viewport="1280x860" name="Governance — decision report" subtitle="Portada iridiscente + resumen ejecutivo con estados y evidencia" -->
+<!doctype html><html lang="es"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  *{box-sizing:border-box}
+  body{margin:0;font-family:var(--font-body);color:var(--text-primary);background:var(--bg-canvas);
+    min-height:100vh;display:flex;align-items:center;justify-content:center;gap:var(--space-6);
+    padding:var(--space-8)}
+  .sheet{width:420px;height:594px;background:var(--bg-surface);border-radius:var(--radius-lg);
+    overflow:hidden;box-shadow:var(--shadow-lg);position:relative;display:flex;flex-direction:column}
+
+  /* ---------- COVER ---------- */
+  .cover{background:var(--ink-950);color:#fff}
+  .cover .img{position:absolute;inset:0}
+  .cover .img img{width:100%;height:100%;object-fit:cover;opacity:.9}
+  .cover .scrim{position:absolute;inset:0;
+    background:linear-gradient(to top,rgba(11,11,15,.94) 12%,rgba(11,11,15,.35) 55%,rgba(11,11,15,.55))}
+  .cover .inner{position:relative;z-index:2;flex:1;display:flex;flex-direction:column;
+    justify-content:space-between;padding:var(--space-8)}
+  .cover .top{display:flex;align-items:center;justify-content:space-between}
+  .cover .top img{height:20px}
+  .cover .conf{font-family:var(--font-mono);font-size:var(--text-2xs);letter-spacing:var(--tracking-wide);
+    color:var(--ink-200);border:1px solid rgba(255,255,255,.25);border-radius:var(--radius-pill);padding:4px 10px;white-space:nowrap}
+  .cover .mid{display:flex;flex-direction:column;gap:var(--space-4)}
+  .cover .kicker{font-family:var(--font-mono);font-size:var(--text-2xs);letter-spacing:var(--tracking-wider);
+    text-transform:uppercase;color:var(--violet-300)}
+  .cover h1{font-family:var(--font-display);font-weight:var(--weight-semibold);font-size:var(--text-4xl);
+    letter-spacing:var(--tracking-tighter);line-height:1.02;margin:0}
+  .cover h1 em{font-style:normal;color:var(--violet-300)}
+  .cover .meta{display:flex;gap:var(--space-6);border-top:1px solid rgba(255,255,255,.18);padding-top:var(--space-4)}
+  .cover .meta div{display:flex;flex-direction:column;gap:2px}
+  .cover .meta .k{font-family:var(--font-mono);font-size:var(--text-2xs);letter-spacing:var(--tracking-wide);color:var(--ink-400)}
+  .cover .meta .v{font-size:var(--text-sm);font-weight:var(--weight-medium)}
+
+  /* ---------- INNER ---------- */
+  .doc{padding:var(--space-8);display:flex;flex-direction:column;gap:var(--space-5)}
+  .dochead{display:flex;align-items:center;justify-content:space-between;
+    border-bottom:1px solid var(--border-subtle);padding-bottom:var(--space-3)}
+  .dochead .sym{height:16px}
+  .dochead .pg{font-family:var(--font-mono);font-size:var(--text-2xs);color:var(--text-muted);letter-spacing:var(--tracking-wide)}
+  .eyebrow{font-family:var(--font-mono);font-size:var(--text-2xs);letter-spacing:var(--tracking-wider);
+    text-transform:uppercase;color:var(--text-accent)}
+  .doc h2{font-family:var(--font-display);font-weight:var(--weight-semibold);font-size:var(--text-xl);
+    letter-spacing:var(--tracking-tight);line-height:var(--leading-tight);margin:0}
+  .lead{font-size:var(--text-sm);line-height:var(--leading-snug);color:var(--text-secondary);margin:0}
+  .lead em{font-style:normal;color:var(--text-accent);font-weight:var(--weight-semibold)}
+
+  .stat{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-3)}
+  .st{border:1px solid var(--border-default);border-radius:var(--radius-md);padding:var(--space-3);
+    display:flex;flex-direction:column;gap:4px}
+  .st .n{font-family:var(--font-display);font-size:var(--text-2xl);font-weight:var(--weight-semibold);
+    letter-spacing:var(--tracking-tight);line-height:1}
+  .st .l{font-family:var(--font-mono);font-size:var(--text-2xs);color:var(--text-muted);letter-spacing:var(--tracking-wide)}
+
+  .rows{display:flex;flex-direction:column;gap:var(--space-2)}
+  .rl{font-family:var(--font-mono);font-size:var(--text-2xs);letter-spacing:var(--tracking-wider);
+    text-transform:uppercase;color:var(--text-muted)}
+  .item{display:flex;align-items:center;gap:var(--space-3);padding:10px var(--space-3);
+    border:1px solid var(--border-subtle);border-radius:var(--radius-md);background:var(--bg-surface)}
+  .item .t{font-size:var(--text-sm);color:var(--text-primary);flex:1}
+  .item .src{font-family:var(--font-mono);font-size:var(--text-2xs);color:var(--text-muted)}
+  .badge{font-family:var(--font-mono);font-size:var(--text-2xs);letter-spacing:var(--tracking-wide);
+    padding:3px 8px;border-radius:var(--radius-pill);white-space:nowrap}
+  .badge .hn{font-size:12px;margin-right:4px;vertical-align:-1px}
+  .b-ok{background:var(--green-soft);color:#0E7A4E}
+  .b-warn{background:var(--amber-soft);color:#9A6212}
+  .b-risk{background:var(--red-soft);color:#A52A33}
+
+  .foot{margin-top:auto;display:flex;align-items:center;justify-content:space-between;
+    border-top:1px solid var(--border-subtle);padding-top:var(--space-3)}
+  .foot .sig{display:flex;align-items:center;gap:var(--space-2);font-size:var(--text-xs);color:var(--text-secondary)}
+  .foot .av{width:22px;height:22px;border-radius:50%;background:var(--violet-500);color:#fff;
+    display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-size:9px;font-weight:700}
+  .foot .h{font-family:var(--font-mono);font-size:var(--text-2xs);color:var(--text-muted)}
+</style></head>
+<body>
+  <!-- Cover -->
+  <div class="sheet cover">
+    <div class="img"><img src="../assets/ref/iridescent.jpg" alt=""></div>
+    <div class="scrim"></div>
+    <div class="inner">
+      <div class="top">
+        <img src="../assets/logo-horizontal-white.svg" alt="SIMON THINKS">
+        <span class="conf">Confianza 87%</span>
+      </div>
+      <div class="mid">
+        <span class="kicker">Informe de decisión · Q3 2026</span>
+        <h1>Migración <em>multi-cloud</em> de la carga crítica.</h1>
+        <p style="margin:0;font-size:var(--text-sm);color:var(--ink-200);line-height:var(--leading-snug);max-width:34ch">
+          Recomendación gobernada, trazable a 3 fuentes de evidencia y a la política de continuidad vigente.</p>
+      </div>
+      <div class="meta">
+        <div><span class="k">Espacio</span><span class="v">Acme · Governance</span></div>
+        <div><span class="k">Módulos</span><span class="v">THINK · CORE</span></div>
+        <div><span class="k">Estado</span><span class="v">Para firma</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Inner page -->
+  <div class="sheet">
+    <div class="doc">
+      <div class="dochead">
+        <img class="sym" src="../assets/symbol-violet.svg" alt="">
+        <span class="pg">Resumen ejecutivo · 02</span>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:var(--space-3)">
+        <span class="eyebrow">Recomendación</span>
+        <h2>Adoptar multi-cloud por fases antes de Q4.</h2>
+        <p class="lead">Replicar la carga crítica en un segundo proveedor y mantener el actual como primario hasta validar <em>latencia y coste</em>. Reversible en cualquier fase.</p>
+      </div>
+
+      <div class="stat">
+        <div class="st"><span class="n" style="color:var(--violet-600)">87%</span><span class="l">confianza</span></div>
+        <div class="st"><span class="n">3</span><span class="l">fuentes</span></div>
+        <div class="st"><span class="n" style="color:var(--green-500)">+9m</span><span class="l">retorno riesgo</span></div>
+      </div>
+
+      <div class="rows">
+        <span class="rl">Evidencia evaluada</span>
+        <div class="item"><span class="t">SLA no cubre region failover</span><span class="src">§4.2</span><span class="badge b-risk"><i class="hn hn-exclamation-triangle"></i>Riesgo</span></div>
+        <div class="item"><span class="t">2 cortes regionales / 18 meses</span><span class="src">ops</span><span class="badge b-warn"><i class="hn hn-bell"></i>Atención</span></div>
+        <div class="item"><span class="t">+18% opex, recuperado a 9 meses</span><span class="src">fin·B</span><span class="badge b-ok"><i class="hn hn-check-circle"></i>Aceptable</span></div>
+      </div>
+
+      <div class="foot">
+        <div class="sig"><span class="av">AM</span><div style="display:flex;flex-direction:column"><span style="font-weight:var(--weight-medium)">A. Marín</span><span class="h">Chief Risk Officer</span></div></div>
+        <span class="h">simonthinks.ai · trazable</span>
+      </div>
+    </div>
+  </div>
+</body></html>

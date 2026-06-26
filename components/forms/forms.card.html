@@ -1,0 +1,46 @@
+<!-- @dsCard group="Components" viewport="720x420" name="Forms — input, select, radio, checkbox, switch" subtitle="Labels, hints, errors, choices, toggles" -->
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../styles.css">
+<style>
+  body{margin:0;font-family:var(--font-body);background:var(--bg-canvas);padding:var(--space-6)}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-6) var(--space-8);max-width:620px}
+  .stack{display:flex;flex-direction:column;gap:var(--space-4)}
+</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js"></script>
+<script src="../../_ds_bundle.js"></script>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+  const { Input, Select, Checkbox, Switch, RadioGroup } = window.SIMONTHINKSDesignSystem_ae45ac;
+  const Search = <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>;
+  function Demo(){
+    const [plan,setPlan] = React.useState('core');
+    return (
+      <div className="grid">
+        <div className="stack">
+          <Input label="Organización" placeholder="Acme Inc." required defaultValue="Northwind Co." />
+          <Input label="Buscar conocimiento" leadingIcon={Search} placeholder="finanzas Q3…" />
+          <Input label="Email corporativo" error="Formato no válido" defaultValue="maria@" />
+        </div>
+        <div className="stack">
+          <Select label="Módulo activo" options={['THINK','CORE','CUSTOM','LIGHT']} defaultValue="CORE" />
+          <Select label="Plan" placeholder="Elegir plan…" options={['LIGHT','CORE','ENTERPRISE']} />
+          <div className="stack" style={{gap:'var(--space-3)',marginTop:'var(--space-1)'}}>
+            <RadioGroup value={plan} onChange={setPlan} options={[
+              {value:'light', label:'LIGHT', description:'Equipos pequeños'},
+              {value:'core',  label:'CORE',  description:'Gobernanza completa'},
+              {value:'enterprise', label:'ENTERPRISE'},
+            ]} />
+            <Checkbox label="Memoria de largo plazo" description="Indexa lecciones pasadas" defaultChecked />
+            <Switch label="Módulo CUSTOM activo" defaultChecked />
+          </div>
+        </div>
+      </div>
+    );
+  }
+  ReactDOM.createRoot(document.getElementById('root')).render(<Demo/>);
+</script>
+</body></html>

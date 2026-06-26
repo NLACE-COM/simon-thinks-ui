@@ -1,0 +1,58 @@
+<!-- @dsCard group="Brand" viewport="760x300" name="Logo — horizontal lockups" subtitle="Con y sin tagline, sobre claro y oscuro" -->
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../styles.css">
+<style>
+  *{box-sizing:border-box}
+  body{margin:0;font-family:var(--font-body);color:var(--text-primary);
+    background:var(--bg-surface);padding:var(--space-6);
+    display:flex;flex-direction:column;gap:var(--space-4)}
+  .row{display:grid;grid-template-columns:118px 1fr 1fr;gap:var(--space-3);align-items:stretch}
+  .meta{display:flex;flex-direction:column;justify-content:center;gap:var(--space-1);padding-right:var(--space-2)}
+  .meta .name{font-family:var(--font-display);font-weight:var(--weight-semibold);font-size:var(--text-md);
+    letter-spacing:var(--tracking-tight);line-height:var(--leading-tight)}
+  .meta .use{font-family:var(--font-mono);font-size:var(--text-2xs);letter-spacing:var(--tracking-wide);
+    color:var(--text-muted);line-height:var(--leading-snug)}
+  .panel{border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;
+    padding:var(--space-5) var(--space-6);min-height:84px}
+  .light{background:var(--bg-surface);border:1px solid var(--border-subtle)}
+  .dark{background:var(--ink-950)}
+  .tag{height:38px}
+  .notag{height:22px}
+  .corner{position:absolute;top:var(--space-2);right:var(--space-3);font-family:var(--font-mono);
+    font-size:var(--text-2xs);letter-spacing:var(--tracking-wide);color:var(--text-muted)}
+  .panel{position:relative}
+  .panel .bg{position:absolute;top:var(--space-2);left:var(--space-3);font-family:var(--font-mono);
+    font-size:9px;letter-spacing:var(--tracking-wide);text-transform:uppercase;color:var(--ink-300)}
+  .dark .bg{color:var(--ink-500)}
+  .head{display:flex;align-items:baseline;justify-content:space-between;gap:var(--space-4)}
+  .eyebrow{font-family:var(--font-mono);font-size:var(--text-2xs);letter-spacing:var(--tracking-wider);
+    text-transform:uppercase;color:var(--text-accent)}
+  .note{font-size:var(--text-xs);color:var(--text-secondary)}
+</style></head>
+<body>
+  <div class="head">
+    <span class="eyebrow">Logotipo · Horizontal</span>
+    <span class="note">Isotipo + wordmark en una línea. Versión monocromática.</span>
+  </div>
+
+  <div class="row">
+    <div class="meta">
+      <span class="name">Con tagline</span>
+      <span class="use">AI governance for real decisions</span>
+    </div>
+    <div class="panel light"><span class="bg">Claro</span><img class="tag" src="../assets/logo-horizontal-tagline.svg" alt="SIMON THINKS — con tagline"></div>
+    <div class="panel dark"><span class="bg">Oscuro</span><img class="tag" src="../assets/logo-horizontal-tagline-white.svg" alt="SIMON THINKS — con tagline"></div>
+  </div>
+
+  <div class="row">
+    <div class="meta">
+      <span class="name">Sin tagline</span>
+      <span class="use">Lockup compacto</span>
+    </div>
+    <div class="panel light"><span class="bg">Claro</span><img class="notag" src="../assets/logo-horizontal-notagline.svg" alt="SIMON THINKS"></div>
+    <div class="panel dark"><span class="bg">Oscuro</span><img class="notag" src="../assets/logo-horizontal-notagline-white.svg" alt="SIMON THINKS"></div>
+  </div>
+
+  <div class="note" style="color:var(--text-muted);font-family:var(--font-mono);font-size:var(--text-2xs);letter-spacing:var(--tracking-wide)">
+    Con tagline → primer contacto, portadas, firmas. Sin tagline → cabeceras, UI, espacios reducidos.
+  </div>
+</body></html>

@@ -1,0 +1,30 @@
+<!-- @dsCard group="Components" viewport="700x240" name="Brand — module nodes" subtitle="THINK · CORE · CUSTOM · LIGHT, active & idle" -->
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../styles.css">
+<style>
+  body{margin:0;font-family:var(--font-body);background:var(--bg-canvas);padding:var(--space-6)}
+  .row{display:flex;gap:var(--space-4);flex-wrap:wrap}
+  .row > *{flex:1;min-width:150px}
+</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js"></script>
+<script src="../../_ds_bundle.js"></script>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+  const { ModuleNode } = window.SIMONTHINKSDesignSystem_ae45ac;
+  function Demo(){
+    return (
+      <div className="row">
+        <ModuleNode module="think" name="THINK" description="Razona en el presente" active/>
+        <ModuleNode module="core" name="CORE" description="Memoria + contexto base"/>
+        <ModuleNode module="custom" name="CUSTOM" description="Flujos a medida" idle/>
+        <ModuleNode module="light" name="LIGHT" description="Sólo lo esencial" idle/>
+      </div>
+    );
+  }
+  ReactDOM.createRoot(document.getElementById('root')).render(<Demo/>);
+</script>
+</body></html>

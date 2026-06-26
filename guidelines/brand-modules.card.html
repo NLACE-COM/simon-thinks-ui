@@ -1,0 +1,19 @@
+<!-- @dsCard group="Brand" viewport="700x170" name="Module language" subtitle="THINK · CORE · CUSTOM · LIGHT — modules activate only when needed" -->
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../styles.css">
+<style>
+  body{margin:0;font-family:var(--font-body);padding:var(--space-6);background:var(--bg-surface);display:flex;align-items:center;gap:var(--space-3)}
+  .node{flex:1;border:1px solid var(--border-default);border-radius:var(--radius-md);padding:var(--space-4);display:flex;flex-direction:column;gap:var(--space-2);background:var(--white)}
+  .node .id{font-family:var(--font-mono);font-size:var(--text-2xs);color:var(--text-muted)}
+  .node .name{font-family:var(--font-display);font-weight:var(--weight-semibold);font-size:var(--text-md);color:var(--text-primary);letter-spacing:var(--tracking-tight)}
+  .node.active{border-color:var(--violet-500);background:var(--violet-50)}
+  .node.active .name{color:var(--violet-700)}
+  .dot{width:7px;height:7px;border-radius:var(--radius-pill);background:var(--ink-200)}
+  .node.active .dot{background:var(--violet-500)}
+  .row{display:flex;align-items:center;gap:var(--space-2)}
+</style></head>
+<body>
+  <div class="node active"><div class="row"><span class="dot"></span><span class="id">01</span></div><span class="name">THINK</span></div>
+  <div class="node"><div class="row"><span class="dot"></span><span class="id">02</span></div><span class="name">CORE</span></div>
+  <div class="node active"><div class="row"><span class="dot"></span><span class="id">03</span></div><span class="name">CUSTOM</span></div>
+  <div class="node"><div class="row"><span class="dot"></span><span class="id">04</span></div><span class="name">LIGHT</span></div>
+</body></html>

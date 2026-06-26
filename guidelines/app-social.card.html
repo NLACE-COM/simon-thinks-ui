@@ -1,0 +1,58 @@
+<!-- @dsCard group="Applications" viewport="1200x660" name="Social — post formats" subtitle="Cuadrados 1:1 — firma iridiscente y declaración en ink" -->
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../styles.css">
+<style>
+  *{box-sizing:border-box}
+  body{margin:0;font-family:var(--font-body);color:var(--text-primary);background:var(--bg-canvas);
+    min-height:100vh;display:flex;align-items:center;justify-content:center;gap:var(--space-6);padding:var(--space-8)}
+  .post{width:420px;height:420px;border-radius:var(--radius-xl);overflow:hidden;position:relative;
+    box-shadow:var(--shadow-lg);display:flex;flex-direction:column;justify-content:space-between;padding:var(--space-8)}
+  .cap{font-family:var(--font-mono);font-size:var(--text-2xs);letter-spacing:var(--tracking-wider);
+    text-transform:uppercase;text-align:center;color:var(--text-muted)}
+  .col{display:flex;flex-direction:column;align-items:center;gap:var(--space-3)}
+
+  /* Post A — iridescent signature */
+  .a{background:var(--violet-50)}
+  .a .bg{position:absolute;inset:0}
+  .a .bg img{width:100%;height:100%;object-fit:cover;opacity:.95}
+  .a .scrim{position:absolute;inset:0;background:linear-gradient(to top,rgba(244,238,255,.92),rgba(244,238,255,.15) 55%,transparent)}
+  .a .row{position:relative;z-index:2}
+  .a img.logo{height:22px}
+  .a h2{position:relative;z-index:2;font-family:var(--font-display);font-weight:var(--weight-semibold);
+    font-size:var(--text-3xl);letter-spacing:var(--tracking-tighter);line-height:1.02;margin:0;color:var(--ink-950)}
+  .a h2 em{font-style:normal;color:var(--violet-600)}
+  .a .tag{position:relative;z-index:2;font-family:var(--font-mono);font-size:var(--text-2xs);
+    letter-spacing:var(--tracking-wide);color:var(--violet-700)}
+
+  /* Post B — ink statement */
+  .b{background:var(--ink-950);color:#fff}
+  .b .glow{position:absolute;width:340px;height:340px;right:-90px;top:-90px;border-radius:50%;
+    background:radial-gradient(circle,rgba(140,82,255,.55),transparent 65%);filter:blur(8px)}
+  .b img.symbol{height:34px;position:relative;z-index:2}
+  .b h2{position:relative;z-index:2;font-family:var(--font-display);font-weight:var(--weight-semibold);
+    font-size:var(--text-2xl);letter-spacing:var(--tracking-tight);line-height:1.12;margin:0}
+  .b h2 em{font-style:normal;color:var(--violet-300)}
+  .b .meta{position:relative;z-index:2;display:flex;align-items:center;justify-content:space-between}
+  .b .meta img{height:16px}
+  .b .meta .h{font-family:var(--font-mono);font-size:var(--text-2xs);letter-spacing:var(--tracking-wide);color:var(--ink-400)}
+</style></head>
+<body>
+  <div class="col">
+    <div class="post a">
+      <div class="bg"><img src="../assets/ref/iridescent.jpg" alt=""></div>
+      <div class="scrim"></div>
+      <div class="row"><img class="logo" src="../assets/logo-horizontal-notagline.svg" alt="SIMON THINKS"></div>
+      <h2>Convierte conocimiento en <em>decisiones.</em></h2>
+      <span class="tag">// gobernanza de IA, sin ruido</span>
+    </div>
+    <span class="cap">Firma — feed / anuncio</span>
+  </div>
+  <div class="col">
+    <div class="post b">
+      <div class="glow"></div>
+      <img class="symbol" src="../assets/symbol-white.svg" alt="">
+      <h2>El sistema piensa <em>con</em> tu organización, no por encima de ella.</h2>
+      <div class="meta"><img src="../assets/logo-horizontal-white.svg" alt="SIMON THINKS"><span class="h">simonthinks.ai</span></div>
+    </div>
+    <span class="cap">Declaración — cita / carrusel</span>
+  </div>
+</body></html>

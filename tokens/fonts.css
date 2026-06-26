@@ -1,0 +1,8 @@
+/* SIMON THINKS — Webfonts
+   Primary: Figtree (Google Fonts, open source — exact brand font)
+   Secondary/Display: Schibsted Grotesk (Google Fonts) — SUBSTITUTE for Neue Montreal,
+     which is a commercial font (Pangram Pangram) not available as a webfont here.
+     Schibsted Grotesk is the closest free neo-grotesque match. See readme.md.
+   Mono: JetBrains Mono — technical labels, node IDs, code. */
+
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&family=JetBrains+Mono:wght@400;500;600&display=swap');

@@ -1,0 +1,10 @@
+/* SIMON THINKS — Design System
+   Single global-CSS entry point. Consumers link THIS file.
+   Keep this file a list of @imports only. */
+
+@import url("tokens/fonts.css");
+@import url("tokens/colors.css");
+@import url("tokens/typography.css");
+@import url("tokens/spacing.css");
+@import url("tokens/effects.css");
+@import url("tokens/icons.css");

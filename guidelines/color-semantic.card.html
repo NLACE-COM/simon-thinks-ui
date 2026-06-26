@@ -1,0 +1,27 @@
+<!-- @dsCard group="Colors" viewport="700x160" name="Semantic surfaces" subtitle="Light & dark surface / text roles" -->
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../styles.css">
+<style>
+  body{margin:0;font-family:var(--font-body);padding:var(--space-5);display:flex;gap:var(--space-3)}
+  .col{flex:1;display:flex;flex-direction:column;gap:var(--space-2)}
+  .demo{border-radius:var(--radius-md);padding:var(--space-4);display:flex;flex-direction:column;gap:var(--space-2)}
+  .lt{background:var(--bg-canvas);border:1px solid var(--border-default)}
+  .card{background:var(--bg-surface);border:1px solid var(--border-subtle);border-radius:var(--radius-sm);padding:var(--space-3);box-shadow:var(--shadow-sm)}
+  .t1{color:var(--text-primary);font-size:var(--text-sm);font-weight:600}
+  .t2{color:var(--text-secondary);font-size:var(--text-xs)}
+  .t3{color:var(--text-muted);font-size:var(--text-xs)}
+  .lab{font-family:var(--font-mono);font-size:var(--text-2xs);letter-spacing:var(--tracking-wide);text-transform:uppercase;color:var(--text-muted)}
+</style></head>
+<body>
+  <div class="col">
+    <span class="lab">Light</span>
+    <div class="demo lt">
+      <div class="card"><span class="t1">Primary text</span><br><span class="t2">Secondary text</span> · <span class="t3">muted</span></div>
+    </div>
+  </div>
+  <div class="col" data-theme="dark">
+    <span class="lab" style="color:var(--ink-400)">Dark</span>
+    <div class="demo" style="background:var(--bg-canvas);border:1px solid var(--border-default)">
+      <div class="card" style="background:var(--bg-elevated);border:1px solid var(--border-subtle)"><span class="t1">Primary text</span><br><span class="t2">Secondary text</span> · <span class="t3">muted</span></div>
+    </div>
+  </div>
+</body></html>

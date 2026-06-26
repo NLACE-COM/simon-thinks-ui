@@ -1,0 +1,85 @@
+<!-- @dsCard group="Charts" viewport="900x600" name="Diagrams — decision flow & architecture" subtitle="Lenguaje modular de nodos: pipeline, flujo de decisión y bucle de gobernanza" -->
+<!doctype html><html lang="es"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  *{box-sizing:border-box}
+  body{margin:0;font-family:var(--font-body);background:var(--bg-canvas);color:var(--text-primary);
+    padding:var(--space-8);display:flex;flex-direction:column;gap:var(--space-8)}
+  .sec{display:flex;flex-direction:column;gap:var(--space-4)}
+  .lab{font-family:var(--font-mono);font-size:var(--text-2xs);letter-spacing:var(--tracking-wider);
+    text-transform:uppercase;color:var(--text-muted)}
+
+  /* ---- pipeline ---- */
+  .pipe{display:flex;align-items:stretch;gap:0}
+  .node{flex:1;background:var(--bg-surface);border:1px solid var(--border-default);border-radius:var(--radius-lg);
+    padding:var(--space-4) var(--space-4);display:flex;flex-direction:column;gap:6px;position:relative;z-index:1}
+  .node .id{font-family:var(--font-mono);font-size:var(--text-2xs);color:var(--text-muted);letter-spacing:var(--tracking-wide)}
+  .node .nm{font-family:var(--font-display);font-weight:var(--weight-semibold);font-size:var(--text-md);letter-spacing:var(--tracking-tight)}
+  .node .ds{font-size:var(--text-xs);color:var(--text-secondary);line-height:var(--leading-snug)}
+  .node.on{border-color:var(--border-accent);box-shadow:var(--shadow-glow)}
+  .node.on .nm{color:var(--text-accent)}
+  .conn{flex:0 0 40px;display:flex;align-items:center;justify-content:center;color:var(--border-strong)}
+  .conn svg{width:24px;height:24px}
+
+  /* ---- flow graph (fixed 820x300 stage) ---- */
+  .flowstage{position:relative;width:820px;max-width:100%;height:300px;margin:0 auto}
+  .fnode{position:absolute;background:var(--bg-surface);border:1px solid var(--border-default);border-radius:var(--radius-md);
+    padding:var(--space-3) var(--space-4);display:flex;flex-direction:column;gap:2px;z-index:2;justify-content:center}
+  .fnode .k{font-family:var(--font-mono);font-size:var(--text-2xs);letter-spacing:var(--tracking-wide);color:var(--text-muted)}
+  .fnode .t{font-size:var(--text-sm);font-weight:var(--weight-medium)}
+  .fnode .sub{font-size:11px;color:var(--text-muted);line-height:var(--leading-snug)}
+  .fnode.core{background:var(--ink-950);color:#fff;border-color:var(--ink-950)}
+  .fnode.core .k{color:var(--violet-300)}
+  .fnode.core .sub{color:var(--ink-300)}
+  .fnode.dec{border-color:var(--border-accent);box-shadow:var(--shadow-glow)}
+  .fnode.dec .t{color:var(--text-accent)}
+  .flowsvg{position:absolute;inset:0;z-index:1;overflow:visible}
+  .flowsvg path{fill:none;stroke:var(--border-strong);stroke-width:1.6}
+  .flowsvg .acc{stroke:var(--violet-500)}
+  .badge{align-self:flex-start;font-family:var(--font-mono);font-size:9px;letter-spacing:var(--tracking-wide);
+    text-transform:uppercase;background:var(--bg-accent-soft);color:var(--text-accent);border-radius:var(--radius-pill);padding:2px 7px;margin-top:4px}
+</style></head>
+<body>
+  <div class="sec">
+    <span class="lab">01 · Arquitectura modular — pipeline</span>
+    <div class="pipe">
+      <div class="node on"><span class="id">node://think</span><span class="nm">THINK</span><span class="ds">Razonamiento y contexto</span></div>
+      <div class="conn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+      <div class="node on"><span class="id">node://core</span><span class="nm">CORE</span><span class="ds">Gobernanza y memoria</span></div>
+      <div class="conn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+      <div class="node"><span class="id">node://custom</span><span class="nm">CUSTOM</span><span class="ds">Reglas del cliente</span></div>
+      <div class="conn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+      <div class="node"><span class="id">node://light</span><span class="nm">LIGHT</span><span class="ds">Entrega y resumen</span></div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <span class="lab">02 · Flujo de decisión gobernada</span>
+    <div class="flowstage">
+      <svg class="flowsvg" viewBox="0 0 820 300" width="820" height="300" preserveAspectRatio="xMidYMid meet">
+        <defs>
+          <marker id="ah" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0 0L6 3L0 6" fill="none" stroke="var(--border-strong)" stroke-width="1.4"/></marker>
+          <marker id="ahv" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0 0L6 3L0 6" fill="none" stroke="var(--violet-500)" stroke-width="1.4"/></marker>
+        </defs>
+        <!-- Contexto -> CORE -->
+        <path d="M165 55 C 215 55, 215 110, 250 110" marker-end="url(#ah)"/>
+        <!-- Evidencia -> CORE -->
+        <path d="M165 150 C 215 150, 215 125, 250 125" marker-end="url(#ah)"/>
+        <!-- CORE -> Recomendación -->
+        <path class="acc" d="M410 115 C 455 115, 455 90, 500 90" marker-end="url(#ahv)"/>
+        <!-- Recomendación -> Decisión -->
+        <path class="acc" d="M660 90 L 700 90" marker-end="url(#ahv)"/>
+        <!-- Decisión -> Lección (feedback loop) -->
+        <path class="acc" d="M757 130 C 757 230, 400 255, 190 255" marker-end="url(#ahv)" stroke-dasharray="4 4"/>
+        <!-- Lección -> Contexto (feeds back) -->
+        <path d="M80 220 L 80 85" marker-end="url(#ah)" stroke-dasharray="4 4"/>
+      </svg>
+      <div class="fnode" style="left:0;top:25px;width:165px"><span class="k">input · 01</span><span class="t">Contexto</span></div>
+      <div class="fnode" style="left:0;top:120px;width:165px"><span class="k">input · 02</span><span class="t">Evidencia</span></div>
+      <div class="fnode core" style="left:250px;top:80px;width:160px"><span class="k">CORE</span><span class="t">Núcleo de gobernanza</span><span class="sub">Evalúa · traza · versiona</span></div>
+      <div class="fnode" style="left:500px;top:50px;width:160px"><span class="k">output</span><span class="t">Recomendación</span><span class="badge">confianza 87%</span></div>
+      <div class="fnode dec" style="left:700px;top:62px;width:115px"><span class="k">acción</span><span class="t">Decisión</span></div>
+      <div class="fnode" style="left:0;top:222px;width:190px"><span class="k">memoria</span><span class="t">Lección registrada</span><span class="sub">realimenta el contexto</span></div>
+    </div>
+  </div>
+</body></html>

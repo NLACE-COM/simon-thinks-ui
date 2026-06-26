@@ -1,0 +1,61 @@
+<!-- @dsCard group="Components" viewport="700x360" name="Core — buttons, badges, tags, avatars" subtitle="Primary action set and metadata" -->
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../styles.css">
+<style>
+  body{margin:0;font-family:var(--font-body);background:var(--bg-canvas);padding:var(--space-6)}
+  .wrap{display:flex;flex-direction:column;gap:var(--space-5)}
+  .row{display:flex;align-items:center;gap:var(--space-3);flex-wrap:wrap}
+  .lab{font-family:var(--font-mono);font-size:var(--text-2xs);letter-spacing:var(--tracking-wider);text-transform:uppercase;color:var(--text-muted);width:100%;margin-bottom:calc(-1 * var(--space-2))}
+</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js"></script>
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<script src="../../_ds_bundle.js"></script>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+  const { Button, IconButton, Badge, Tag, Avatar, AvatarGroup } = window.SIMONTHINKSDesignSystem_ae45ac;
+  const I = (n, p={}) => { const el = lucide.createElement(lucide[n]); return <span dangerouslySetInnerHTML={{__html: el.outerHTML}} style={{display:'inline-flex'}} {...p}/>; };
+  function Demo(){
+    return (
+      <div className="wrap">
+        <div className="row"><span className="lab">Buttons</span>
+          <Button variant="primary">Guardar decisión</Button>
+          <Button variant="secondary">Nuevo módulo</Button>
+          <Button variant="ghost">Cancelar</Button>
+          <Button variant="danger">Eliminar</Button>
+          <Button variant="primary" loading>Procesando</Button>
+          <Button variant="secondary" disabled>Bloqueado</Button>
+        </div>
+        <div className="row"><span className="lab">Sizes &amp; icons</span>
+          <Button size="sm" variant="secondary">Small</Button>
+          <Button size="md" variant="primary" leadingIcon={I('Plus')}>Crear nodo</Button>
+          <Button size="lg" variant="primary" trailingIcon={I('ArrowRight')}>Decidir</Button>
+          <IconButton label="buscar" variant="outline">{I('Search')}</IconButton>
+          <IconButton label="opciones" variant="ghost">{I('MoreHorizontal')}</IconButton>
+          <IconButton label="enviar" variant="solid">{I('ArrowUp')}</IconButton>
+        </div>
+        <div className="row"><span className="lab">Badges &amp; tags</span>
+          <Badge variant="accent">CORE</Badge>
+          <Badge variant="solid">THINK</Badge>
+          <Badge variant="success" dot>Activo</Badge>
+          <Badge variant="warning" dot>Revisión</Badge>
+          <Badge variant="neutral">v2.4.0</Badge>
+          <Tag>node://core/think</Tag>
+          <Tag selected>CONTEXT</Tag>
+          <Tag onRemove={()=>{}}>finanzas-2024</Tag>
+        </div>
+        <div className="row"><span className="lab">Avatars</span>
+          <Avatar name="María Soto" size="lg"/>
+          <Avatar name="Ana Ruiz" size="md"/>
+          <Avatar name="SIMON" square/>
+          <AvatarGroup max={4} avatars={[{name:'María Soto'},{name:'Ana Ruiz'},{name:'Leo Pérez'},{name:'Iván Gil'},{name:'Sara Mora'}]} />
+        </div>
+      </div>
+    );
+  }
+  ReactDOM.createRoot(document.getElementById('root')).render(<Demo/>);
+</script>
+</body></html>

@@ -1,0 +1,120 @@
+<!-- @dsCard group="Icons" viewport="960x720" name="Iconography — Pixel Icon set" subtitle="HackerNoon Pixel Icon Library · 578 glifos × line/solid sobre grid 24px" -->
+<!doctype html><html lang="es"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../styles.css">
+<style>
+  *{box-sizing:border-box}
+  body{margin:0;font-family:var(--font-body);background:var(--bg-canvas);color:var(--text-primary);
+    padding:var(--space-8);display:flex;flex-direction:column;gap:var(--space-7)}
+  .head{display:flex;flex-direction:column;gap:var(--space-2);max-width:74ch}
+  .eyebrow{font-family:var(--font-mono);font-size:var(--text-2xs);letter-spacing:var(--tracking-wider);
+    text-transform:uppercase;color:var(--text-accent)}
+  h1{font-family:var(--font-display);font-weight:var(--weight-semibold);font-size:var(--text-3xl);
+    letter-spacing:var(--tracking-tighter);line-height:var(--leading-tight);margin:0}
+  .lead{margin:0;font-size:var(--text-sm);color:var(--text-secondary);line-height:var(--leading-snug)}
+  .lead code{font-family:var(--font-mono);font-size:var(--text-xs);background:var(--bg-subtle);padding:1px 6px;border-radius:var(--radius-xs);color:var(--text-accent)}
+
+  /* hero sample */
+  .hero{display:flex;align-items:center;gap:var(--space-6);flex-wrap:wrap;
+    background:var(--bg-surface);border:1px solid var(--border-default);border-radius:var(--radius-lg);padding:var(--space-6)}
+  .hero .big{display:flex;align-items:baseline;gap:var(--space-5);color:var(--violet-500)}
+  .hero .big .hn{color:inherit}
+  .sizes{display:flex;align-items:center;gap:var(--space-5);margin-left:auto}
+  .sz{display:flex;flex-direction:column;align-items:center;gap:6px;color:var(--text-primary)}
+  .sz span{font-family:var(--font-mono);font-size:var(--text-2xs);color:var(--text-muted)}
+
+  /* line vs solid */
+  .compare{display:flex;gap:var(--space-6);flex-wrap:wrap;align-items:center}
+  .cpair{display:flex;align-items:center;gap:var(--space-3);background:var(--bg-surface);border:1px solid var(--border-default);
+    border-radius:var(--radius-md);padding:10px var(--space-4)}
+  .cpair .hn{font-size:22px}
+  .cpair .lbl{font-family:var(--font-mono);font-size:var(--text-2xs);color:var(--text-muted);letter-spacing:var(--tracking-wide)}
+  .cpair .s{color:var(--violet-600)}
+
+  .cat{display:flex;flex-direction:column;gap:var(--space-3)}
+  .catlab{font-family:var(--font-mono);font-size:var(--text-2xs);letter-spacing:var(--tracking-wider);
+    text-transform:uppercase;color:var(--text-muted)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(96px,1fr));gap:var(--space-2)}
+  .tile{display:flex;flex-direction:column;align-items:center;gap:8px;padding:var(--space-3) 6px;
+    border:1px solid var(--border-subtle);border-radius:var(--radius-md);background:var(--bg-surface);
+    transition:border-color var(--duration-fast) var(--ease-out),color var(--duration-fast) var(--ease-out),background var(--duration-fast) var(--ease-out)}
+  .tile:hover{border-color:var(--border-accent);color:var(--text-accent);background:var(--bg-accent-soft)}
+  .tile .hn{font-size:24px}
+  .tile .n{font-family:var(--font-mono);font-size:10px;color:var(--text-muted);text-align:center;line-height:1.3;word-break:break-word}
+  .tile:hover .n{color:var(--text-accent)}
+
+  .usage{font-family:var(--font-mono);font-size:var(--text-xs);background:var(--ink-950);color:#E9E9EC;
+    border-radius:var(--radius-md);padding:var(--space-4) var(--space-5);line-height:1.7;overflow:auto}
+  .usage .c{color:var(--ink-400)}
+  .usage .k{color:var(--violet-300)}
+</style></head>
+<body>
+  <div class="head">
+    <span class="eyebrow">Icons · set principal</span>
+    <h1>Pixel Icon Library</h1>
+    <p class="lead">Set base de iconografía: <strong>578 glifos</strong> sobre grid de 24px, en dos estilos —
+      <em>line</em> y <em>solid</em>. Estética pixel/retro coherente con la voz de SIMON THINKS. Se renderizan como
+      fuente (color = <code>currentColor</code>, tamaño = font-size). Uso: <code>&lt;i class="hn hn-search"&gt;&lt;/i&gt;</code>
+      o el componente <code>&lt;Icon name="search" /&gt;</code>.</p>
+  </div>
+
+  <div class="hero">
+    <div class="big">
+      <i class="hn hn-robot" style="font-size:52px"></i>
+      <i class="hn hn-sparkles" style="font-size:40px"></i>
+      <i class="hn hn-chart-network" style="font-size:32px"></i>
+      <i class="hn hn-shapes" style="font-size:26px"></i>
+    </div>
+    <div class="sizes">
+      <div class="sz"><i class="hn hn-cog" style="font-size:14px"></i><span>14</span></div>
+      <div class="sz"><i class="hn hn-cog" style="font-size:18px"></i><span>18</span></div>
+      <div class="sz"><i class="hn hn-cog" style="font-size:24px"></i><span>24</span></div>
+      <div class="sz"><i class="hn hn-cog" style="font-size:32px"></i><span>32</span></div>
+    </div>
+  </div>
+
+  <div class="cat">
+    <span class="catlab">Line vs. solid — mismo glifo, dos pesos</span>
+    <div class="compare" id="compare"></div>
+  </div>
+
+  <div id="cats"></div>
+
+  <pre class="usage"><span class="c">// HTML</span>
+&lt;i class=<span class="k">"hn hn-chart-line"</span>&gt;&lt;/i&gt;        <span class="c">// line</span>
+&lt;i class=<span class="k">"hn hn-chart-line-solid"</span>&gt;&lt;/i&gt;  <span class="c">// solid</span>
+
+<span class="c">// React</span>
+&lt;<span class="k">Icon</span> name=<span class="k">"chart-line"</span> /&gt;
+&lt;<span class="k">Icon</span> name=<span class="k">"robot"</span> solid size={24} color=<span class="k">"var(--violet-500)"</span> /&gt;</pre>
+
+<script>
+  const compare = ['robot','sparkles','bell','heart','star','lock','bookmark','cog'];
+  const cmp = document.getElementById('compare');
+  compare.forEach(n => {
+    const d = document.createElement('div'); d.className = 'cpair';
+    d.innerHTML = `<i class="hn hn-${n}"></i><i class="hn hn-${n}-solid s"></i><span class="lbl">${n}</span>`;
+    cmp.appendChild(d);
+  });
+
+  const categories = {
+    'Interfaz': ['home','search','cog','bell','user','users','grid','table','filter','sort','calendar-alt','clock','eye','lock','unlock','bookmark','tag','heart','star','trash','edit','download','upload','share','link','external-link','refresh','save','print','wallet'],
+    'Acciones & estado': ['plus','minus','check','times','check-circle','badge-check','octagon-check','octagon-times','info-circle','question-circle','exclamation-triangle','bolt','fire','flag','flag-checkered','trophy','crown','thumbsup','thumbsdown'],
+    'Navegación': ['chevron-down','chevron-up','angle-right','angle-left','arrow-right','arrow-left','arrow-up','arrow-down','external-link','side-nav-expand','side-nav-collapse','expand','collapse','bars','ellipses-horizontal'],
+    'Tech, datos & IA': ['robot','sparkles','code','code-block','command','laptop-code','chart-line','chart-network','analytics','sitemap','branch','pull-request','merge','fork','bug','cloud','wifi','cybersecurity','machine-learning','programming','data-science'],
+    'Decisión & comunicación': ['lightbulb','handshake','face-thinking','comment','comments','message','envelope','bullhorn','book','clipboard','check-list','quote-left','seedlings','globe'],
+    'Marca & social': ['github','figma','slack','notion','anthropic','open-ai','linkedin','x','rss','discord']
+  };
+  const wrap = document.getElementById('cats');
+  Object.entries(categories).forEach(([label, names]) => {
+    const sec = document.createElement('div'); sec.className = 'cat'; sec.style.marginBottom = 'var(--space-6)';
+    const h = document.createElement('span'); h.className = 'catlab'; h.textContent = label; sec.appendChild(h);
+    const g = document.createElement('div'); g.className = 'grid';
+    names.forEach(n => {
+      const t = document.createElement('div'); t.className = 'tile';
+      t.innerHTML = `<i class="hn hn-${n}"></i><span class="n">${n}</span>`;
+      g.appendChild(t);
+    });
+    sec.appendChild(g); wrap.appendChild(sec);
+  });
+</script>
+</body></html>

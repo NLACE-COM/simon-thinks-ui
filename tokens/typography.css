@@ -1,0 +1,67 @@
+/* SIMON THINKS — Typography tokens
+   Primary:   Figtree  — UI, body, most headings. Humanist-geometric, clear, friendly.
+   Display:   Schibsted Grotesk — large statements / wordmark-adjacent display
+              (SUBSTITUTE for Neue Montreal — see fonts.css / readme.md).
+   Mono:      JetBrains Mono — technical labels, node IDs, module tags, code. */
+
+:root {
+  /* Families */
+  --font-body:    'Figtree', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-display: 'Schibsted Grotesk', 'Figtree', system-ui, sans-serif;
+  --font-mono:    'JetBrains Mono', ui-monospace, 'SFMono-Regular', monospace;
+
+  /* Weights */
+  --weight-light:    300;
+  --weight-regular:  400;
+  --weight-medium:   500;
+  --weight-semibold: 600;
+  --weight-bold:     700;
+  --weight-extrabold:800;
+
+  /* Type scale (16px root) */
+  --text-2xs:  0.6875rem; /* 11 — micro labels */
+  --text-xs:   0.75rem;   /* 12 */
+  --text-sm:   0.875rem;  /* 14 */
+  --text-base: 1rem;      /* 16 */
+  --text-md:   1.125rem;  /* 18 */
+  --text-lg:   1.25rem;   /* 20 */
+  --text-xl:   1.5rem;    /* 24 */
+  --text-2xl:  1.875rem;  /* 30 */
+  --text-3xl:  2.25rem;   /* 36 */
+  --text-4xl:  3rem;      /* 48 */
+  --text-5xl:  3.75rem;   /* 60 */
+  --text-6xl:  4.75rem;   /* 76 */
+
+  /* Line heights */
+  --leading-none:    1;
+  --leading-tight:   1.12;
+  --leading-snug:    1.28;
+  --leading-normal:  1.5;
+  --leading-relaxed: 1.68;
+
+  /* Letter spacing */
+  --tracking-tighter: -0.03em; /* large display */
+  --tracking-tight:   -0.015em;
+  --tracking-normal:  0em;
+  --tracking-wide:    0.04em;
+  --tracking-wider:   0.12em;  /* uppercase eyebrows / mono labels */
+
+  /* ---- Semantic roles ---- */
+  --display-font:    var(--font-display);
+  --display-weight:  var(--weight-semibold);
+  --display-tracking:var(--tracking-tighter);
+  --display-leading: var(--leading-tight);
+
+  --heading-font:    var(--font-body);
+  --heading-weight:  var(--weight-semibold);
+  --heading-leading: var(--leading-snug);
+
+  --body-font:    var(--font-body);
+  --body-weight:  var(--weight-regular);
+  --body-leading: var(--leading-normal);
+
+  --eyebrow-font:     var(--font-mono);
+  --eyebrow-weight:   var(--weight-medium);
+  --eyebrow-tracking: var(--tracking-wider);
+  --eyebrow-size:     var(--text-xs);
+}

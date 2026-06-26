@@ -1,0 +1,100 @@
+<!-- @dsCard group="Components" viewport="760x760" name="Feedback — alert, toast, modal, drawer, tooltip, progress, skeleton" subtitle="Mensajería, overlays, progreso y estados de carga" -->
+<!doctype html><html lang="es"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../styles.css">
+<style>
+  body{margin:0;font-family:var(--font-body);background:var(--bg-canvas);padding:var(--space-6)}
+  .wrap{display:flex;flex-direction:column;gap:var(--space-5)}
+  .lab{font-family:var(--font-mono);font-size:var(--text-2xs);letter-spacing:var(--tracking-wider);text-transform:uppercase;color:var(--text-muted);margin-bottom:var(--space-2)}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-3)}
+  .row{display:flex;align-items:center;gap:var(--space-4);flex-wrap:wrap}
+  .stage{position:relative;border:1px dashed var(--border-default);border-radius:var(--radius-md);
+    background:var(--bg-subtle);height:150px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+  .stage .hint{font-family:var(--font-mono);font-size:var(--text-2xs);color:var(--text-muted)}
+  /* keep fixed children contained inside the demo stage */
+  .stage .st-modal__overlay,.stage .st-toaststack,.stage .st-drawer__overlay,.stage .st-drawer{position:absolute}
+</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js"></script>
+<script src="../../_ds_bundle.js"></script>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+  const { Alert, Toast, ToastStack, Modal, Tooltip, Progress, ProgressRing, Skeleton, Drawer, Button, IconButton, Badge } = window.SIMONTHINKSDesignSystem_ae45ac;
+  function Demo(){
+    const [open,setOpen] = React.useState(false);
+    const [drawer,setDrawer] = React.useState(false);
+    return (
+      <div className="wrap">
+        <div>
+          <div className="lab">Alerts</div>
+          <div className="grid">
+            <Alert variant="info" title="Decisión versionada">Trazable a 3 fuentes de evidencia.</Alert>
+            <Alert variant="success" title="Registrada" onClose={()=>{}}>Política de continuidad cumplida.</Alert>
+            <Alert variant="warning" title="Requiere revisión">2 cortes regionales en 18 meses.</Alert>
+            <Alert variant="danger" title="Política incumplida" onClose={()=>{}}>El SLA no cubre region failover.</Alert>
+          </div>
+        </div>
+
+        <div className="row" style={{alignItems:'flex-start',gap:'var(--space-6)'}}>
+          <div style={{flex:1,minWidth:260}}>
+            <div className="lab">Toast</div>
+            <div style={{display:'flex',flexDirection:'column',gap:'var(--space-3)'}}>
+              <Toast variant="success" title="Decisión registrada" description="Versionada y trazable." onClose={()=>{}} />
+              <Toast variant="default" title="Sincronizando módulos" description="THINK · CORE" action="Ver" onAction={()=>{}} onClose={()=>{}} />
+            </div>
+          </div>
+          <div>
+            <div className="lab">Tooltip · Modal</div>
+            <div className="row">
+              <Tooltip label="Trazable a la política §4.2" placement="top"><Button variant="secondary">Hover ↑</Button></Tooltip>
+              <Tooltip label="Confianza 87%" placement="right"><Badge variant="accent" dot>CORE</Badge></Tooltip>
+              <Button variant="primary" onClick={()=>setOpen(true)}>Abrir modal</Button>
+              <Button variant="secondary" onClick={()=>setDrawer(true)}>Abrir drawer</Button>
+            </div>
+          </div>
+        </div>
+
+        <div className="row" style={{alignItems:'center',gap:'var(--space-8)'}}>
+          <div style={{flex:1,minWidth:280,display:'flex',flexDirection:'column',gap:'var(--space-3)'}}>
+            <div className="lab">Progress</div>
+            <Progress label="Indexando memoria" value={62} showValue />
+            <Progress variant="danger" value={28} size="sm" />
+            <Progress indeterminate label="Sincronizando módulos" />
+          </div>
+          <div>
+            <div className="lab">Confianza</div>
+            <div className="row">
+              <ProgressRing value={87} />
+              <ProgressRing value={58} variant="warning" size={56} />
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div className="lab">Skeleton — carga</div>
+          <div className="st-card" style={{display:'flex',gap:'var(--space-4)',alignItems:'center',border:'1px solid var(--border-default)',borderRadius:'var(--radius-lg)',padding:'var(--space-4)',background:'var(--bg-surface)'}}>
+            <Skeleton variant="circle" width={44} />
+            <div style={{flex:1}}><Skeleton variant="text" lines={3} /></div>
+            <Skeleton variant="rect" width={90} height={36} />
+          </div>
+        </div>
+
+        <div className="stage">
+          <span className="hint">{open || drawer ? '' : 'Modal y drawer aparecen aquí'}</span>
+          <Modal open={open} onClose={()=>setOpen(false)} eyebrow="Decisión · Q3" title="Registrar decisión"
+            footer={<><Button variant="ghost" onClick={()=>setOpen(false)}>Cancelar</Button><Button variant="primary" onClick={()=>setOpen(false)}>Registrar</Button></>}>
+            Esta acción versiona la decisión y la hace trazable a su evidencia y política. Es reversible.
+          </Modal>
+          <Drawer open={drawer} onClose={()=>setDrawer(false)} side="right" eyebrow="Filtros" title="Refinar decisiones"
+            footer={<><Button variant="ghost" onClick={()=>setDrawer(false)}>Limpiar</Button><Button variant="primary" onClick={()=>setDrawer(false)}>Aplicar</Button></>}>
+            Filtra por módulo, estado de gobernanza o nivel de confianza.
+          </Drawer>
+        </div>
+      </div>
+    );
+  }
+  ReactDOM.createRoot(document.getElementById('root')).render(<Demo/>);
+</script>
+</body></html>

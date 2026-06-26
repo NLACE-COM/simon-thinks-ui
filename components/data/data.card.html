@@ -1,0 +1,44 @@
+<!-- @dsCard group="Components" viewport="760x560" name="Data — table, accordion" subtitle="Tabla ordenable y secciones desplegables" -->
+<!doctype html><html lang="es"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../styles.css">
+<style>
+  body{margin:0;font-family:var(--font-body);background:var(--bg-canvas);padding:var(--space-6)}
+</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js"></script>
+<script src="../../_ds_bundle.js"></script>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+  const { Table, Accordion, Badge, Tag } = window.SIMONTHINKSDesignSystem_ae45ac;
+  const base = [
+    {id:1, decision:'Migración multi-cloud', module:'CORE', confidence:87, status:'Aprobado', sv:'success'},
+    {id:2, decision:'Política de retención de datos', module:'THINK', confidence:74, status:'Revisión', sv:'warning'},
+    {id:3, decision:'Proveedor de identidad', module:'CUSTOM', confidence:92, status:'Aprobado', sv:'success'},
+    {id:4, decision:'Cifrado en reposo legacy', module:'CORE', confidence:58, status:'Bloqueado', sv:'danger'},
+  ];
+  function Demo(){
+    const [dir,setDir] = React.useState('desc');
+    const data = [...base].sort((a,b)=> dir==='asc' ? a.confidence-b.confidence : b.confidence-a.confidence);
+    const columns = [
+      {key:'decision', header:'Decisión'},
+      {key:'module', header:'Módulo', render:v=><Tag selected>{v}</Tag>},
+      {key:'confidence', header:'Confianza', align:'right', sortable:true, render:v=><span style={{fontFamily:'var(--font-mono)',color:v<60?'var(--red-500)':'var(--text-primary)'}}>{v}%</span>},
+      {key:'status', header:'Estado', render:(v,r)=><Badge variant={r.sv} dot>{v}</Badge>},
+    ];
+    return (
+      <div style={{display:'flex',flexDirection:'column',gap:'var(--space-5)'}}>
+        <Table columns={columns} data={data} rowKey="id" sortBy="confidence" sortDir={dir} onSort={(k,d)=>setDir(d)} />
+        <Accordion type="single" defaultValue="gov" numbered items={[
+          {value:'gov', title:'¿Cómo se gobierna una decisión?', content:'Cada decisión se versiona y se traza a su evidencia y a la política vigente. Es reversible y auditable.'},
+          {value:'mem', title:'¿Qué recuerda el sistema?', content:'Lecciones pasadas indexadas por contexto, que realimentan futuras recomendaciones.'},
+          {value:'mod', title:'¿Qué aportan los módulos?', content:'THINK razona, CORE gobierna, CUSTOM aplica reglas del cliente y LIGHT entrega el resumen.'},
+        ]} />
+      </div>
+    );
+  }
+  ReactDOM.createRoot(document.getElementById('root')).render(<Demo/>);
+</script>
+</body></html>

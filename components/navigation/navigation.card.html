@@ -1,0 +1,70 @@
+<!-- @dsCard group="Components" viewport="720x440" name="Navigation — tabs, breadcrumb, menu" subtitle="Tabs, ruta jerárquica y menú desplegable" -->
+<!doctype html><html lang="es"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../styles.css">
+<style>
+  body{margin:0;font-family:var(--font-body);background:var(--bg-canvas);padding:var(--space-6)}
+  .stack{display:flex;flex-direction:column;gap:var(--space-6)}
+  .lab{font-family:var(--font-mono);font-size:var(--text-2xs);letter-spacing:var(--tracking-wider);text-transform:uppercase;color:var(--text-muted);margin-bottom:var(--space-3)}
+  .row{display:flex;align-items:center;gap:var(--space-6);flex-wrap:wrap}
+</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js"></script>
+<script src="../../_ds_bundle.js"></script>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+  const { Tabs, Breadcrumb, Menu, Pagination, IconButton, Button } = window.SIMONTHINKSDesignSystem_ae45ac;
+  const svg = (p) => <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">{p}</svg>;
+  const Home = svg(<><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></>);
+  const More = svg(<><circle cx="5" cy="12" r="1.4"/><circle cx="12" cy="12" r="1.4"/><circle cx="19" cy="12" r="1.4"/></>);
+  const Copy = svg(<><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></>);
+  const Down = svg(<><path d="M12 4v12"/><path d="M6 12l6 6 6-6"/></>);
+  const Trash = svg(<><path d="M4 7h16"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/><path d="M6 7l1 13h10l1-13"/></>);
+  const items = [
+    {value:'memoria', label:'Memoria', count:142},
+    {value:'contexto', label:'Contexto'},
+    {value:'decisiones', label:'Decisiones', count:8},
+    {value:'modulos', label:'Módulos'},
+  ];
+  function Demo(){
+    const [a,setA] = React.useState('memoria');
+    const [b,setB] = React.useState('contexto');
+    const [pg,setPg] = React.useState(3);
+    return (
+      <div className="stack">
+        <div>
+          <div className="lab">Breadcrumb</div>
+          <Breadcrumb items={[
+            {label:'Acme', href:'#', icon:Home},
+            {label:'Governance', href:'#'},
+            {label:'Decisiones', href:'#'},
+            {label:'Q3 · Proveedor cloud'},
+          ]} />
+        </div>
+        <div><div className="lab">Tabs — underline</div><Tabs items={items} value={a} onChange={setA}/></div>
+        <div className="row">
+          <div><div className="lab">Tabs — pills</div><Tabs variant="pills" items={items.slice(0,3)} value={b} onChange={setB}/></div>
+          <div>
+            <div className="lab">Menu</div>
+            <Menu align="start" trigger={<Button variant="secondary" trailingIcon={svg(<path d="M6 9l6 6 6-6"/>)}>Acciones</Button>}
+              items={[
+                {type:'label', label:'Decisión'},
+                {label:'Duplicar', icon:Copy, shortcut:'⌘D'},
+                {label:'Exportar', icon:Down},
+                {type:'separator'},
+                {label:'Eliminar', icon:Trash, danger:true},
+              ]} />
+          </div>
+        </div>
+        <div>
+          <div className="lab">Pagination</div>
+          <Pagination page={pg} pageCount={12} onChange={setPg} />
+        </div>
+      </div>
+    );
+  }
+  ReactDOM.createRoot(document.getElementById('root')).render(<Demo/>);
+</script>
+</body></html>

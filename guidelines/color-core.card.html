@@ -1,0 +1,36 @@
+<!-- @dsCard group="Colors" viewport="760x220" name="Core palette" subtitle="Los cinco colores principales — en orden" -->
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../styles.css">
+<style>
+  *{box-sizing:border-box}
+  body{margin:0;font-family:var(--font-body);padding:var(--space-6);display:flex;gap:var(--space-3)}
+  .sw{flex:1;display:flex;flex-direction:column;gap:var(--space-3)}
+  .chip{height:120px;border-radius:var(--radius-lg);box-shadow:inset 0 0 0 1px rgba(15,14,20,.08);
+    display:flex;align-items:flex-start;padding:var(--space-3)}
+  .idx{font-family:var(--font-mono);font-size:var(--text-2xs);letter-spacing:var(--tracking-wide)}
+  .meta{display:flex;flex-direction:column;gap:2px}
+  .nm{font-size:var(--text-sm);font-weight:var(--weight-semibold);color:var(--text-primary);letter-spacing:var(--tracking-tight)}
+  .h{font-family:var(--font-mono);font-size:var(--text-2xs);color:var(--text-secondary)}
+  .role{font-family:var(--font-mono);font-size:var(--text-2xs);color:var(--text-muted)}
+</style></head>
+<body>
+  <div class="sw">
+    <div class="chip" style="background:var(--violet-500)"><span class="idx" style="color:rgba(255,255,255,.85)">01</span></div>
+    <div class="meta"><span class="nm">Violeta</span><span class="h">#9D50FF</span><span class="role">primario</span></div>
+  </div>
+  <div class="sw">
+    <div class="chip" style="background:var(--blue-500)"><span class="idx" style="color:rgba(255,255,255,.85)">02</span></div>
+    <div class="meta"><span class="nm">Azul</span><span class="h">#002ADD</span><span class="role">secundario</span></div>
+  </div>
+  <div class="sw">
+    <div class="chip" style="background:var(--ink-50)"><span class="idx" style="color:var(--ink-400)">03</span></div>
+    <div class="meta"><span class="nm">Light</span><span class="h">#F6F6F6</span><span class="role">superficie</span></div>
+  </div>
+  <div class="sw">
+    <div class="chip" style="background:var(--ink-950)"><span class="idx" style="color:rgba(255,255,255,.7)">04</span></div>
+    <div class="meta"><span class="nm">Ink</span><span class="h">#0F0E14</span><span class="role">estructura</span></div>
+  </div>
+  <div class="sw">
+    <div class="chip" style="background:var(--white)"><span class="idx" style="color:var(--ink-400)">05</span></div>
+    <div class="meta"><span class="nm">Blanco</span><span class="h">#FFFFFF</span><span class="role">base</span></div>
+  </div>
+</body></html>

@@ -1,0 +1,154 @@
+<!-- @dsCard group="Developers" viewport="1240x880" name="Framework integration" subtitle="Tailwind · Astro · Vue · Svelte · HTML — tokens, preset y clases .stk-*" -->
+<!doctype html><html lang="es"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="../integrations/stk-components.css">
+<style>
+  *{box-sizing:border-box}
+  body{margin:0;font-family:var(--font-body);color:var(--text-primary);
+    background:var(--bg-canvas);padding:var(--space-8);min-height:100vh;
+    display:flex;flex-direction:column;gap:var(--space-6)}
+  .head{display:flex;flex-direction:column;gap:var(--space-2);max-width:78ch}
+  .head h1{font-family:var(--font-display);font-weight:var(--weight-semibold);font-size:var(--text-3xl);
+    letter-spacing:var(--tracking-tighter);line-height:var(--leading-tight);margin:0}
+  .head p{margin:0;font-size:var(--text-sm);color:var(--text-secondary)}
+  .head p em{font-style:normal;color:var(--text-accent);font-weight:var(--weight-medium)}
+
+  .stack{display:flex;gap:var(--space-2);flex-wrap:wrap}
+  .chip{font-family:var(--font-mono);font-size:var(--text-2xs);letter-spacing:var(--tracking-wide);
+    padding:5px 11px;border-radius:var(--radius-pill);background:var(--bg-surface);
+    border:1px solid var(--border-default);color:var(--text-secondary)}
+
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-5);align-items:start}
+
+  .panel{background:var(--bg-surface);border:1px solid var(--border-default);
+    border-radius:var(--radius-lg);overflow:hidden}
+  .panel > .ph{display:flex;align-items:center;gap:var(--space-2);padding:var(--space-3) var(--space-4);
+    border-bottom:1px solid var(--border-subtle);background:var(--bg-subtle)}
+  .ph .t{font-family:var(--font-mono);font-size:var(--text-2xs);letter-spacing:var(--tracking-wider);
+    text-transform:uppercase;color:var(--text-muted)}
+  .ph .dot{width:8px;height:8px;border-radius:50%;background:var(--violet-400)}
+  .pbody{padding:var(--space-5);display:flex;flex-direction:column;gap:var(--space-5)}
+
+  .layer{display:flex;flex-direction:column;gap:var(--space-3)}
+  .layer > .lbl{font-family:var(--font-mono);font-size:var(--text-2xs);letter-spacing:var(--tracking-wide);
+    color:var(--text-muted)}
+  .row{display:flex;align-items:center;gap:var(--space-3);flex-wrap:wrap}
+
+  /* code */
+  pre{margin:0;background:var(--ink-950);color:#E9E9EC;border-radius:var(--radius-md);
+    padding:var(--space-4);overflow:auto;font-family:var(--font-mono);font-size:var(--text-xs);
+    line-height:1.65;letter-spacing:0}
+  pre .c{color:var(--ink-400)}
+  pre .k{color:var(--violet-300)}
+  pre .s{color:#8FE3C4}
+  .code-wrap{display:flex;flex-direction:column;gap:var(--space-2)}
+  .code-wrap .cap{font-family:var(--font-mono);font-size:var(--text-2xs);letter-spacing:var(--tracking-wide);color:var(--text-secondary)}
+
+  .tw{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-3)}
+  .twcard{border:1px solid var(--border-default);border-radius:var(--radius-md);padding:var(--space-4);
+    display:flex;flex-direction:column;gap:6px;background:var(--bg-surface)}
+  .twcard .u{font-family:var(--font-mono);font-size:var(--text-2xs);color:var(--violet-600)}
+  .twcard .d{font-size:var(--text-xs);color:var(--text-secondary)}
+</style></head>
+<body>
+  <div class="head">
+    <span class="stk-eyebrow">Developers · Integración</span>
+    <h1>Un set de tokens, cualquier framework.</h1>
+    <p>Todo nace de <em>variables CSS</em> en <code class="stk-mono">styles.css</code>. Encima: un <em>preset de Tailwind</em> (v3 y v4) y una capa de <em>clases <code class="stk-mono">.stk-*</code></em> framework-agnósticas. Un cambio de token se propaga a todo — incluidas las utilidades de Tailwind y el modo oscuro.</p>
+    <div class="stack">
+      <span class="chip">Tailwind v3 · v4</span><span class="chip">Astro</span><span class="chip">Vue / Nuxt</span>
+      <span class="chip">Svelte / Kit</span><span class="chip">React</span><span class="chip">HTML / CDN</span>
+    </div>
+  </div>
+
+  <div class="cols">
+    <!-- LEFT: live .stk-* components -->
+    <div class="panel">
+      <div class="ph"><span class="dot"></span><span class="t">Clases .stk-* — render real, sin React</span></div>
+      <div class="pbody">
+        <div class="layer">
+          <span class="lbl">// botones</span>
+          <div class="row">
+            <button class="stk-btn stk-btn--primary">Solicitar demo</button>
+            <button class="stk-btn stk-btn--secondary">Secundario</button>
+            <button class="stk-btn stk-btn--ghost">Ver módulos</button>
+            <button class="stk-btn stk-btn--subtle stk-btn--sm">Detalle</button>
+          </div>
+        </div>
+        <div class="layer">
+          <span class="lbl">// badges &amp; tags</span>
+          <div class="row">
+            <span class="stk-badge stk-badge--solid">Recomendación</span>
+            <span class="stk-badge stk-badge--success stk-badge--dot">Aprobado</span>
+            <span class="stk-badge stk-badge--warning stk-badge--dot">En revisión</span>
+            <span class="stk-badge stk-badge--danger stk-badge--dot">Bloqueado</span>
+            <span class="stk-tag stk-tag--mono">THINK</span>
+          </div>
+        </div>
+        <div class="layer">
+          <span class="lbl">// campo + switch</span>
+          <div class="stk-field">
+            <label class="stk-label">Espacio de decisión</label>
+            <input class="stk-input" placeholder="Q3 · Proveedor cloud">
+          </div>
+          <div class="row">
+            <label class="stk-check"><input type="checkbox" checked> Requiere evidencia</label>
+            <label class="stk-switch"><input type="checkbox" checked><span class="stk-track"></span></label>
+            <span class="stk-muted" style="font-size:var(--text-xs)">Auto-registro</span>
+          </div>
+        </div>
+        <div class="layer">
+          <span class="lbl">// alert</span>
+          <div class="stk-alert stk-alert--info">
+            <span class="stk-mono" style="color:var(--context-500)">i</span>
+            <span>Decisión versionada. Cambiar un token actualiza este bloque y su variante oscura.</span>
+          </div>
+        </div>
+        <div class="layer">
+          <span class="lbl">// data-theme="dark" — misma marca, mismas clases</span>
+          <div data-theme="dark" class="stk-card" style="display:flex;flex-direction:column;gap:var(--space-3)">
+            <div class="row">
+              <button class="stk-btn stk-btn--primary">Empezar</button>
+              <span class="stk-badge stk-badge--solid">CORE</span>
+            </div>
+            <span class="stk-muted" style="font-size:var(--text-xs)">Las clases .stk-* heredan el tema sin tocar el markup.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: integration code -->
+    <div class="panel">
+      <div class="ph"><span class="dot"></span><span class="t">Cómo se conecta</span></div>
+      <div class="pbody">
+        <div class="code-wrap">
+          <span class="cap">Tailwind v4 — CSS-first</span>
+<pre><span class="c">/* app.css */</span>
+<span class="k">@import</span> <span class="s">"@simonthinks/ds/integrations/tailwind.css"</span>;
+
+<span class="c">&lt;!-- utilidades desde los tokens --&gt;</span>
+&lt;div class=<span class="s">"bg-surface text-primary rounded-lg shadow-md"</span>&gt;…&lt;/div&gt;</pre>
+        </div>
+        <div class="code-wrap">
+          <span class="cap">Tailwind v3 — preset</span>
+<pre><span class="c">// tailwind.config.js</span>
+presets: [<span class="k">require</span>(<span class="s">'@simonthinks/ds/integrations/tailwind.preset.js'</span>)],
+<span class="c">// + import '@simonthinks/ds/styles.css' una vez</span></pre>
+        </div>
+        <div class="code-wrap">
+          <span class="cap">Astro / Vue / Svelte — clases .stk-*</span>
+<pre><span class="k">import</span> <span class="s">'@simonthinks/ds/styles.css'</span>;
+<span class="k">import</span> <span class="s">'@simonthinks/ds/integrations/stk-components.css'</span>;
+
+&lt;button class=<span class="s">"stk-btn stk-btn--primary"</span>&gt;Empezar&lt;/button&gt;</pre>
+        </div>
+        <div class="tw">
+          <div class="twcard"><span class="u">bg-violet-500</span><span class="d">Paleta cruda + modificador de opacidad <code class="stk-mono">/40</code></span></div>
+          <div class="twcard"><span class="u">bg-surface</span><span class="d">Semántico, sigue <code class="stk-mono">data-theme</code></span></div>
+          <div class="twcard"><span class="u">font-display</span><span class="d">Schibsted Grotesk display</span></div>
+          <div class="twcard"><span class="u">rounded-lg · shadow-lg</span><span class="d">Radio y sombra de marca</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body></html>
