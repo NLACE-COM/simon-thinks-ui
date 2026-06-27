@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="SIMON THINKS Deck" description="Deck moderno: portadas claras u oscuras con logo grande, cada slide con un layout distinto, imágenes del sistema, gráficos y diagramas, e iconos como recurso gráfico." -->
+<helmet>
+<script src="./ds-base.js"></script>
+<style>
+  html,body{margin:0;height:100%;background:#0F0E14;overflow:hidden}
+  *{box-sizing:border-box}
+</style>
+</helmet>
+
+<div class="stk-deck" style="position:fixed;inset:0;background:#0F0E14;display:flex;align-items:center;justify-content:center;font-family:var(--font-body)">
+  <div ref="{{ scalerRef }}" style="width:1280px;height:720px;transform:scale(1);transform-origin:center center;position:relative;overflow:hidden;box-shadow:0 40px 120px rgba(0,0,0,.5)">
+    <div ref="{{ trackRef }}" style="display:flex;width:1280px;height:720px;transition:transform .6s cubic-bezier(.65,.02,.25,1);transform:translateX(0px)">
+
+      <!-- 01 · COVER (white) -->
+      <section data-screen-label="01 Cover" style="position:relative;flex:none;width:1280px;height:720px;background:#F6F6F6;color:#0F0E14;display:grid;grid-template-columns:1.06fr .94fr;overflow:hidden">
+        <div style="padding:80px;display:flex;flex-direction:column;justify-content:space-between">
+          <div style="display:flex;align-items:center;gap:12px;font-family:var(--font-mono);font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--violet-600)">
+            <span style="width:8px;height:8px;border-radius:50%;background:var(--violet-500)"></span>Gobernanza de IA · Decisiones reales
+          </div>
+          <div>
+            <img src="../../assets/logo-vertical.svg" alt="SIMON THINKS" style="height:240px;margin-bottom:34px"/>
+            <p style="margin:0;max-width:28ch;font-size:25px;line-height:1.32;color:var(--text-secondary)">El sistema que piensa <em style="font-style:normal;color:var(--violet-600);font-weight:600">con</em> las organizaciones — contexto, evidencia y trazabilidad en cada decisión.</p>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:flex-end;font-family:var(--font-mono);font-size:12px;letter-spacing:.08em;color:var(--text-muted)">
+            <span>SIMON THINKS · 2026</span><span>Plantilla de presentación</span>
+          </div>
+        </div>
+        <div style="position:relative;overflow:hidden">
+          <img src="../../assets/ref/iridescent.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"/>
+        </div>
+      </section>
+
+      <!-- 02 · AGENDA (ink) -->
+      <section data-screen-label="02 Agenda" style="position:relative;flex:none;width:1280px;height:720px;background:#F6F6F6;color:#0F0E14;display:grid;grid-template-columns:1fr 1fr;overflow:hidden">
+        <img src="../../assets/symbol-white.svg" alt="" style="position:absolute;right:40px;top:36px;height:26px;z-index:3"/>
+        <div style="padding:80px;display:flex;flex-direction:column;justify-content:space-between">
+          <span style="font-family:var(--font-mono);font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--text-accent)">Agenda</span>
+          <h2 style="font-family:var(--font-display);font-weight:600;font-size:64px;line-height:1.02;letter-spacing:-.03em;margin:0">Lo que veremos hoy.</h2>
+          <span style="font-family:var(--font-mono);font-size:12px;color:var(--text-muted)">04 secciones · 20 min</span>
+        </div>
+        <div style="background:#0F0E14;color:#fff;padding:72px 80px;display:flex;flex-direction:column;justify-content:center;gap:10px">
+          <div style="display:flex;align-items:baseline;gap:26px;padding:18px 0;border-bottom:1px solid rgba(255,255,255,.12)"><span style="font-family:var(--font-display);font-size:34px;font-weight:600;letter-spacing:-.02em;color:var(--violet-300);width:56px">01</span><span style="font-size:22px;font-weight:500">El problema de decidir</span></div>
+          <div style="display:flex;align-items:baseline;gap:26px;padding:18px 0;border-bottom:1px solid rgba(255,255,255,.12)"><span style="font-family:var(--font-display);font-size:34px;font-weight:600;letter-spacing:-.02em;color:var(--violet-300);width:56px">02</span><span style="font-size:22px;font-weight:500">Los módulos</span></div>
+          <div style="display:flex;align-items:baseline;gap:26px;padding:18px 0;border-bottom:1px solid rgba(255,255,255,.12)"><span style="font-family:var(--font-display);font-size:34px;font-weight:600;letter-spacing:-.02em;color:var(--violet-300);width:56px">03</span><span style="font-size:22px;font-weight:500">Gobernanza en acción</span></div>
+          <div style="display:flex;align-items:baseline;gap:26px;padding:18px 0"><span style="font-family:var(--font-display);font-size:34px;font-weight:600;letter-spacing:-.02em;color:var(--violet-300);width:56px">04</span><span style="font-size:22px;font-weight:500">Resultados</span></div>
+        </div>
+      </section>
+
+      <!-- A · SECTION El problema (aerial) -->
+      <section data-screen-label="03 Sección · El problema" style="position:relative;flex:none;width:1280px;height:720px;background:#0F0E14;color:#fff;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;padding:80px">
+        <img src="../../assets/media/optimized/images/aerial-drone-shot-urban-city-busy-road-intersection-hero.webp" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.82"/>
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(15,14,20,.95) 6%,rgba(15,14,20,.25) 55%,rgba(15,14,20,.5))"></div>
+        <img src="../../assets/symbol-white.svg" alt="" style="position:absolute;right:40px;top:36px;height:26px;z-index:3;filter:drop-shadow(0 2px 8px rgba(0,0,0,.45))"/>
+        <div style="position:relative;max-width:46ch">
+          <span style="font-family:var(--font-display);font-weight:600;font-size:120px;line-height:.9;letter-spacing:-.04em;color:var(--violet-300);display:block">01</span>
+          <h2 style="font-family:var(--font-display);font-weight:600;font-size:56px;line-height:1.04;letter-spacing:-.03em;margin:12px 0 0">Las organizaciones deciden a ciegas.</h2>
+          <p style="margin:14px 0 0;font-size:18px;color:var(--ink-200);max-width:46ch;line-height:1.4">Miles de señales, ninguna trazabilidad. La decisión se toma — pero nadie puede explicarla después.</p>
+        </div>
+      </section>
+
+      <!-- 03 · STATEMENT (violet) -->
+      <section data-screen-label="03 Statement" style="position:relative;flex:none;width:1280px;height:720px;background:var(--violet-500);color:#fff;overflow:hidden;display:flex;align-items:center;padding:100px">
+        <i class="hn hn-quote-left" style="position:absolute;right:40px;top:-40px;font-size:440px;color:#fff;opacity:.12"></i>
+        <img src="../../assets/symbol-white.svg" alt="" style="position:absolute;right:40px;top:36px;height:26px;z-index:3"/>
+        <h2 style="position:relative;font-family:var(--font-display);font-weight:600;font-size:70px;line-height:1.05;letter-spacing:-.03em;margin:0;max-width:20ch">No automatizamos la decisión. La hacemos <span style="color:#0F0E14">defendible.</span></h2>
+        <span style="position:absolute;left:100px;bottom:80px;font-family:var(--font-mono);font-size:13px;letter-spacing:.1em;color:rgba(255,255,255,.7)">— Principio de diseño</span>
+      </section>
+
+      <!-- 04 · MODULES (ink) -->
+      <section data-screen-label="04 Modules" style="position:relative;flex:none;width:1280px;height:720px;background:#0F0E14;color:#fff;overflow:hidden;padding:58px 72px;display:flex;flex-direction:column;gap:26px">
+        <img src="../../assets/symbol-white.svg" alt="" style="position:absolute;right:40px;top:36px;height:26px;z-index:3"/>
+        <div style="display:flex;align-items:flex-end;justify-content:space-between">
+          <h2 style="font-family:var(--font-display);font-weight:600;font-size:46px;letter-spacing:-.03em;margin:0">Cuatro módulos, un flujo.</h2>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:18px;flex:1;min-height:0">
+          <div style="position:relative;border:1px solid rgba(255,255,255,.14);border-radius:16px;padding:22px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden">
+            <img src="../../assets/media/optimized/images/pexels-googledeepmind-25630344-hero.webp" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.4"/>
+            <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(15,14,20,.96) 14%,rgba(15,14,20,.5) 55%,rgba(15,14,20,.72))"></div>
+            <i class="hn hn-face-thinking" style="position:relative;z-index:1;font-size:30px;color:var(--violet-300)"></i>
+            <div style="position:relative;z-index:1"><div style="font-family:var(--font-display);font-weight:600;font-size:24px">THINK</div><p style="margin:6px 0 0;font-size:13px;color:var(--ink-300);line-height:1.4">Razonamiento y contexto.</p></div>
+          </div>
+          <div style="position:relative;border:1px solid rgba(255,255,255,.14);border-radius:16px;padding:22px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden">
+            <img src="../../assets/media/optimized/images/pexels-googledeepmind-17485708-hero.webp" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.4"/>
+            <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(15,14,20,.96) 14%,rgba(15,14,20,.5) 55%,rgba(15,14,20,.72))"></div>
+            <i class="hn hn-shapes" style="position:relative;z-index:1;font-size:30px;color:var(--violet-300)"></i>
+            <div style="position:relative;z-index:1"><div style="font-family:var(--font-display);font-weight:600;font-size:24px">CORE</div><p style="margin:6px 0 0;font-size:13px;color:var(--ink-300);line-height:1.4">Gobernanza y memoria.</p></div>
+          </div>
+          <div style="position:relative;border:1px solid rgba(255,255,255,.14);border-radius:16px;padding:22px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden">
+            <img src="../../assets/media/optimized/images/pexels-googledeepmind-17483873-hero.webp" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.42"/>
+            <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(15,14,20,.96) 14%,rgba(15,14,20,.5) 55%,rgba(15,14,20,.72))"></div>
+            <i class="hn hn-command" style="position:relative;z-index:1;font-size:30px;color:var(--violet-300)"></i>
+            <div style="position:relative;z-index:1"><div style="font-family:var(--font-display);font-weight:600;font-size:24px">CUSTOM</div><p style="margin:6px 0 0;font-size:13px;color:var(--ink-300);line-height:1.4">Reglas del cliente.</p></div>
+          </div>
+          <div style="position:relative;border:1px solid var(--violet-500);border-radius:16px;padding:22px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;background:rgba(157,80,255,.12)">
+            <img src="../../assets/ref/iridescent.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.45"/>
+            <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(15,14,20,.92) 14%,rgba(60,20,110,.4) 55%,rgba(40,12,80,.55))"></div>
+            <i class="hn hn-bolt" style="position:relative;z-index:1;font-size:30px;color:var(--violet-300)"></i>
+            <div style="position:relative;z-index:1"><div style="font-family:var(--font-display);font-weight:600;font-size:24px">LIGHT</div><p style="margin:6px 0 0;font-size:13px;color:var(--ink-200);line-height:1.4">Entrega y resumen.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- B · CÓMO DECIDE (cube data) -->
+      <section data-screen-label="06 Cómo decide" style="position:relative;flex:none;width:1280px;height:720px;background:#F6F6F6;color:#0F0E14;display:grid;grid-template-columns:.9fr 1.1fr;overflow:hidden">
+        <div style="position:relative;overflow:hidden"><img src="../../assets/media/optimized/images/pexels-googledeepmind-17483873-hero.webp" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"/></div>
+        <div style="padding:80px;display:flex;flex-direction:column;justify-content:center;gap:20px">
+          <span style="font-family:var(--font-mono);font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--text-accent)">Cómo decide</span>
+          <h2 style="font-family:var(--font-display);font-weight:600;font-size:50px;line-height:1.04;letter-spacing:-.03em;margin:0">Cada decisión, construida pieza por pieza.</h2>
+          <p style="margin:0;font-size:18px;color:var(--text-secondary);max-width:40ch;line-height:1.45">El núcleo ensambla contexto, evidencia y política en una recomendación que se puede inspeccionar y revertir.</p>
+        </div>
+        <img src="../../assets/symbol.svg" alt="" style="position:absolute;right:40px;top:36px;height:26px;z-index:3"/>
+      </section>
+
+      <!-- 05 · DIAGRAM (white) -->
+      <section data-screen-label="05 Diagram" style="position:relative;flex:none;width:1280px;height:720px;background:#F6F6F6;color:#0F0E14;overflow:hidden;padding:64px 72px;display:flex;flex-direction:column;gap:30px">
+        <img src="../../assets/symbol.svg" alt="" style="position:absolute;right:40px;top:36px;height:26px;z-index:3"/>
+        <div>
+          <span style="font-family:var(--font-mono);font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--text-accent)">Flujo de decisión gobernada</span>
+          <h2 style="font-family:var(--font-display);font-weight:600;font-size:46px;letter-spacing:-.03em;margin:8px 0 0">De la evidencia a la decisión.</h2>
+        </div>
+        <div style="position:relative;width:1136px;height:404px;margin-top:6px">
+          <svg width="1136" height="404" viewBox="0 0 1136 404" preserveAspectRatio="none" style="position:absolute;inset:0;overflow:visible">
+            <defs>
+              <marker id="ah" markerWidth="9" markerHeight="9" refX="5.5" refY="3" orient="auto"><path d="M0 0L6 3L0 6" fill="none" stroke="#C9C9D2" stroke-width="1.6"/></marker>
+              <marker id="ahv" markerWidth="9" markerHeight="9" refX="5.5" refY="3" orient="auto"><path d="M0 0L6 3L0 6" fill="none" stroke="#9D50FF" stroke-width="1.6"/></marker>
+            </defs>
+            <path d="M240 66 C 312 66, 308 150, 380 150" fill="none" stroke="#C9C9D2" stroke-width="1.8" marker-end="url(#ah)"/>
+            <path d="M240 186 C 312 186, 308 164, 380 164" fill="none" stroke="#C9C9D2" stroke-width="1.8" marker-end="url(#ah)"/>
+            <path d="M630 157 C 678 157, 672 152, 720 152" fill="none" stroke="#9D50FF" stroke-width="2.2" marker-end="url(#ahv)"/>
+            <path d="M930 152 L 986 152" fill="none" stroke="#9D50FF" stroke-width="2.2" marker-end="url(#ahv)"/>
+            <path d="M1061 196 C 1061 360, 640 392, 348 360" fill="none" stroke="#9D50FF" stroke-width="1.8" stroke-dasharray="5 5" marker-end="url(#ahv)"/>
+            <text x="660" y="384" text-anchor="middle" font-family="var(--font-mono)" font-size="11" fill="#9D50FF" letter-spacing="0.08em">realimenta el contexto</text>
+          </svg>
+          <div style="position:absolute;left:0;top:30px;width:240px;background:#fff;border:1px solid var(--border-default);border-radius:12px;padding:15px 18px"><div style="font-family:var(--font-mono);font-size:11px;color:var(--text-muted);letter-spacing:.08em">INPUT · 01</div><div style="font-size:18px;font-weight:500;margin-top:2px">Contexto</div></div>
+          <div style="position:absolute;left:0;top:150px;width:240px;background:#fff;border:1px solid var(--border-default);border-radius:12px;padding:15px 18px"><div style="font-family:var(--font-mono);font-size:11px;color:var(--text-muted);letter-spacing:.08em">INPUT · 02</div><div style="font-size:18px;font-weight:500;margin-top:2px">Evidencia</div></div>
+          <div style="position:absolute;left:380px;top:92px;width:250px;background:#0F0E14;color:#fff;border-radius:12px;padding:18px 20px;overflow:hidden"><i class="hn hn-shapes" style="position:absolute;right:-12px;bottom:-16px;font-size:96px;color:var(--violet-500);opacity:.22"></i><div style="font-family:var(--font-mono);font-size:11px;color:var(--violet-300);letter-spacing:.08em">CORE</div><div style="font-size:20px;font-weight:600;margin-top:3px">Núcleo de gobernanza</div><div style="font-size:12px;color:var(--ink-300);margin-top:5px">Evalúa · traza · versiona</div></div>
+          <div style="position:absolute;left:720px;top:92px;width:210px;background:#fff;border:1px solid var(--border-default);border-radius:12px;padding:16px 18px"><div style="font-family:var(--font-mono);font-size:11px;color:var(--text-muted);letter-spacing:.08em">OUTPUT</div><div style="font-size:18px;font-weight:500;margin-top:2px">Recomendación</div><span style="display:inline-block;margin-top:8px;font-family:var(--font-mono);font-size:10px;text-transform:uppercase;letter-spacing:.06em;background:var(--bg-accent-soft);color:var(--text-accent);border-radius:999px;padding:3px 9px">confianza 87%</span></div>
+          <div style="position:absolute;left:986px;top:110px;width:150px;background:#fff;border:1px solid var(--violet-500);box-shadow:0 0 0 4px rgba(157,80,255,.12);border-radius:12px;padding:16px 18px"><div style="font-family:var(--font-mono);font-size:11px;color:var(--text-accent);letter-spacing:.08em">ACCIÓN</div><div style="font-size:18px;font-weight:600;margin-top:2px;color:var(--text-accent)">Decisión</div></div>
+          <div style="position:absolute;left:0;top:300px;width:330px;background:#fff;border:1px solid var(--border-subtle);border-radius:12px;padding:14px 18px"><div style="font-family:var(--font-mono);font-size:11px;color:var(--text-muted);letter-spacing:.08em">MEMORIA</div><div style="font-size:15px;font-weight:500;margin-top:2px;line-height:1.35">Lección registrada que vuelve al contexto</div></div>
+        </div>
+      </section>
+
+      <!-- 06 · CHARTS (white) -->
+      <section data-screen-label="06 Charts" style="position:relative;flex:none;width:1280px;height:720px;background:#F6F6F6;color:#0F0E14;overflow:hidden;padding:64px 72px;display:flex;flex-direction:column;gap:28px">
+        <img src="../../assets/symbol.svg" alt="" style="position:absolute;right:40px;top:36px;height:26px;z-index:3"/>
+        <div style="display:flex;align-items:flex-end;justify-content:space-between">
+          <div>
+            <span style="font-family:var(--font-mono);font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--text-accent)">Panel de gobernanza</span>
+            <h2 style="font-family:var(--font-display);font-weight:600;font-size:46px;letter-spacing:-.03em;margin:8px 0 0">Decisiones, medidas.</h2>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:1.3fr 1fr;gap:22px;flex:1;min-height:0">
+          <div style="background:#fff;border:1px solid var(--border-default);border-radius:16px;padding:26px;display:flex;flex-direction:column">
+            <div style="font-size:14px;font-weight:600;margin-bottom:14px">Decisiones por módulo</div>
+            <svg viewBox="0 0 420 240" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" style="flex:1">
+              <line x1="8" y1="220" x2="412" y2="220" stroke="var(--border-default)" stroke-width="1"/>
+              <line x1="8" y1="120" x2="412" y2="120" stroke="var(--border-subtle)" stroke-width="1" stroke-dasharray="3 4"/>
+              <line x1="8" y1="20" x2="412" y2="20" stroke="var(--border-subtle)" stroke-width="1" stroke-dasharray="3 4"/>
+              <rect x="34" y="124" width="62" height="96" rx="5" fill="var(--violet-500)"/>
+              <rect x="130" y="42" width="62" height="178" rx="5" fill="var(--blue-500)"/>
+              <rect x="226" y="150" width="62" height="70" rx="5" fill="var(--green-500)"/>
+              <rect x="322" y="92" width="62" height="128" rx="5" fill="var(--violet-300)"/>
+              <text x="65" y="236" text-anchor="middle" font-family="var(--font-mono)" font-size="11" fill="var(--text-muted)">THINK</text>
+              <text x="161" y="236" text-anchor="middle" font-family="var(--font-mono)" font-size="11" fill="var(--text-muted)">CORE</text>
+              <text x="257" y="236" text-anchor="middle" font-family="var(--font-mono)" font-size="11" fill="var(--text-muted)">CUSTOM</text>
+              <text x="353" y="236" text-anchor="middle" font-family="var(--font-mono)" font-size="11" fill="var(--text-muted)">LIGHT</text>
+              <text x="65" y="116" text-anchor="middle" font-family="var(--font-mono)" font-size="11" fill="var(--text-secondary)">42</text>
+              <text x="161" y="34" text-anchor="middle" font-family="var(--font-mono)" font-size="11" fill="var(--text-secondary)">78</text>
+              <text x="257" y="142" text-anchor="middle" font-family="var(--font-mono)" font-size="11" fill="var(--text-secondary)">31</text>
+              <text x="353" y="84" text-anchor="middle" font-family="var(--font-mono)" font-size="11" fill="var(--text-secondary)">56</text>
+            </svg>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:22px">
+            <div style="background:#fff;border:1px solid var(--border-default);border-radius:16px;padding:24px;display:flex;align-items:center;gap:22px;flex:1">
+              <svg viewBox="0 0 180 180" width="150" height="150">
+                <g transform="rotate(-90 90 90)">
+                  <circle cx="90" cy="90" r="70" fill="none" stroke="var(--bg-subtle)" stroke-width="26"/>
+                  <circle cx="90" cy="90" r="70" fill="none" stroke="var(--green-500)" stroke-width="26" stroke-dasharray="286.8 439.8" stroke-dashoffset="0"/>
+                  <circle cx="90" cy="90" r="70" fill="none" stroke="var(--amber-500)" stroke-width="26" stroke-dasharray="105.1 439.8" stroke-dashoffset="-286.8"/>
+                  <circle cx="90" cy="90" r="70" fill="none" stroke="var(--red-500)" stroke-width="26" stroke-dasharray="47.9 439.8" stroke-dashoffset="-391.9"/>
+                </g>
+                <text x="90" y="84" text-anchor="middle" font-family="var(--font-display)" font-size="34" font-weight="600" fill="#0F0E14">184</text>
+                <text x="90" y="104" text-anchor="middle" font-family="var(--font-mono)" font-size="10" fill="var(--text-muted)">TOTAL</text>
+              </svg>
+              <div style="display:flex;flex-direction:column;gap:10px;font-size:13px">
+                <span style="display:flex;align-items:center;gap:8px"><span style="width:10px;height:10px;border-radius:3px;background:var(--green-500)"></span>Aprobadas · 65%</span>
+                <span style="display:flex;align-items:center;gap:8px"><span style="width:10px;height:10px;border-radius:3px;background:var(--amber-500)"></span>En revisión · 24%</span>
+                <span style="display:flex;align-items:center;gap:8px"><span style="width:10px;height:10px;border-radius:3px;background:var(--red-500)"></span>Bloqueadas · 11%</span>
+              </div>
+            </div>
+            <div style="background:#0F0E14;color:#fff;border-radius:16px;padding:22px 24px;display:flex;align-items:center;justify-content:space-between">
+              <div><div style="font-family:var(--font-display);font-size:40px;font-weight:600;line-height:1">87%</div><div style="font-family:var(--font-mono);font-size:11px;color:var(--ink-400);margin-top:2px">confianza media</div></div>
+              <svg viewBox="0 0 130 44" width="150" height="48"><path d="M5 34 L26 30 L47 31 L68 22 L89 18 L110 11 L125 7" fill="none" stroke="var(--violet-300)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="125" cy="7" r="3" fill="var(--violet-300)"/></svg>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- C · INSIGHT IA (violet pill) -->
+      <section data-screen-label="09 Insight · IA" style="position:relative;flex:none;width:1280px;height:720px;background:#0F0E14;color:#fff;overflow:hidden;display:flex;align-items:center;padding:90px">
+        <img src="../../assets/media/optimized/images/pexels-googledeepmind-18069695-hero.webp" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"/>
+        <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(15,14,20,.92) 28%,rgba(15,14,20,.3) 72%,transparent)"></div>
+        <img src="../../assets/symbol-white.svg" alt="" style="position:absolute;right:40px;top:36px;height:26px;z-index:3;filter:drop-shadow(0 2px 8px rgba(0,0,0,.45))"/>
+        <div style="position:relative;max-width:30ch">
+          <span style="font-family:var(--font-mono);font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--violet-300)">El modelo no basta</span>
+          <h2 style="font-family:var(--font-display);font-weight:600;font-size:54px;line-height:1.06;letter-spacing:-.03em;margin:14px 0 0">La IA propone. La gobernanza responde por qué.</h2>
+        </div>
+      </section>
+
+      <!-- 07 · METRIC split (image) -->
+      <section data-screen-label="07 Metric" style="position:relative;flex:none;width:1280px;height:720px;background:#F6F6F6;color:#0F0E14;display:grid;grid-template-columns:1.1fr .9fr;overflow:hidden">
+        <img src="../../assets/symbol-white.svg" alt="" style="position:absolute;right:40px;top:36px;height:26px;z-index:3;filter:drop-shadow(0 2px 8px rgba(0,0,0,.4))"/>
+        <div style="padding:80px;display:flex;flex-direction:column;justify-content:center;gap:22px">
+          <span style="font-family:var(--font-mono);font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--text-accent)">Confianza media</span>
+          <div style="font-family:var(--font-display);font-weight:600;font-size:184px;line-height:.9;letter-spacing:-.05em;color:var(--violet-600)">87<span style="font-size:84px">%</span></div>
+          <p style="margin:0;font-size:19px;color:var(--text-secondary);max-width:32ch;line-height:1.4">de las decisiones recomendadas se aprobaron sin revisión adicional, trazables a su evidencia.</p>
+          <div style="display:flex;gap:32px;margin-top:6px">
+            <div><div style="font-family:var(--font-display);font-size:32px;font-weight:600">184</div><div style="font-family:var(--font-mono);font-size:12px;color:var(--text-muted)">decisiones / 30d</div></div>
+            <div><div style="font-family:var(--font-display);font-size:32px;font-weight:600;color:var(--green-500)">+9m</div><div style="font-family:var(--font-mono);font-size:12px;color:var(--text-muted)">retorno de riesgo</div></div>
+          </div>
+        </div>
+        <div style="position:relative;overflow:hidden"><img src="../../assets/ref/tech-violet.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"/></div>
+      </section>
+
+      <!-- 08 · IMAGE full-bleed -->
+      <section data-screen-label="08 Image" style="position:relative;flex:none;width:1280px;height:720px;background:#0F0E14;color:#fff;overflow:hidden;display:flex;align-items:flex-end;padding:72px">
+        <img src="../../assets/symbol-white.svg" alt="" style="position:absolute;right:40px;top:36px;height:26px;z-index:3;filter:drop-shadow(0 2px 8px rgba(0,0,0,.45))"/>
+        <img src="../../assets/ref/collab.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.85"/>
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(15,14,20,.94) 8%,rgba(15,14,20,.2) 52%,rgba(15,14,20,.45))"></div>
+        <div style="position:relative;max-width:34ch">
+          <span style="font-family:var(--font-mono);font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--violet-300)">Gobernanza en acción</span>
+          <h2 style="font-family:var(--font-display);font-weight:600;font-size:48px;line-height:1.06;letter-spacing:-.03em;margin:14px 0 0">Decisiones que la organización entiende y puede auditar.</h2>
+        </div>
+      </section>
+
+      <!-- 09 · TREND (ink, line chart) -->
+      <section data-screen-label="09 Trend" style="position:relative;flex:none;width:1280px;height:720px;background:#0F0E14;color:#fff;overflow:hidden;padding:64px 72px;display:flex;flex-direction:column;gap:26px">
+        <img src="../../assets/symbol-white.svg" alt="" style="position:absolute;right:40px;top:36px;height:26px;z-index:3"/>
+        <div style="display:flex;align-items:flex-end;justify-content:space-between">
+          <div>
+            <span style="font-family:var(--font-mono);font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--violet-300)">Tendencia</span>
+            <h2 style="font-family:var(--font-display);font-weight:600;font-size:46px;letter-spacing:-.03em;margin:8px 0 0">La confianza crece con la memoria.</h2>
+          </div>
+        </div>
+        <div style="flex:1;min-height:0;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:30px 34px;display:flex;flex-direction:column">
+          <svg viewBox="0 0 1000 320" width="100%" height="100%" preserveAspectRatio="none" style="flex:1">
+            <line x1="40" y1="40" x2="980" y2="40" stroke="rgba(255,255,255,.08)" stroke-width="1"/>
+            <line x1="40" y1="140" x2="980" y2="140" stroke="rgba(255,255,255,.08)" stroke-width="1"/>
+            <line x1="40" y1="240" x2="980" y2="240" stroke="rgba(255,255,255,.08)" stroke-width="1"/>
+            <path d="M120 200 L 400 168 L 680 132 L 940 92 L 940 280 L 120 280 Z" fill="var(--violet-500)" opacity="0.12"/>
+            <path d="M120 200 L 400 168 L 680 132 L 940 92" fill="none" stroke="var(--violet-400)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="120" cy="200" r="5" fill="#0F0E14" stroke="var(--violet-300)" stroke-width="3"/>
+            <circle cx="400" cy="168" r="5" fill="#0F0E14" stroke="var(--violet-300)" stroke-width="3"/>
+            <circle cx="680" cy="132" r="5" fill="#0F0E14" stroke="var(--violet-300)" stroke-width="3"/>
+            <circle cx="940" cy="92" r="5" fill="var(--violet-300)" stroke="var(--violet-300)" stroke-width="3"/>
+          </svg>
+          <div style="display:flex;justify-content:space-between;padding:0 6px;font-family:var(--font-mono);font-size:12px;color:var(--ink-400)">
+            <span>Q1 · 62%</span><span>Q2 · 68%</span><span>Q3 · 74%</span><span style="color:var(--violet-300)">Q4 · 81%</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- D · CIERRE memoria (pixel qubit) -->
+      <section data-screen-label="13 Cierre · memoria" style="position:relative;flex:none;width:1280px;height:720px;background:#F6F6F6;color:#0F0E14;display:grid;grid-template-columns:1.1fr .9fr;overflow:hidden">
+        <div style="padding:80px;display:flex;flex-direction:column;justify-content:center;gap:20px">
+          <span style="font-family:var(--font-mono);font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--text-accent)">Aprende con el tiempo</span>
+          <h2 style="font-family:var(--font-display);font-weight:600;font-size:52px;line-height:1.03;letter-spacing:-.03em;margin:0">Cada decisión deja una lección.</h2>
+          <p style="margin:0;font-size:18px;color:var(--text-secondary);max-width:38ch;line-height:1.45">La memoria del sistema convierte cada caso en mejor criterio para el siguiente.</p>
+        </div>
+        <div style="position:relative;overflow:hidden"><img src="../../assets/media/optimized/images/pexels-googledeepmind-25626435-hero.webp" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"/></div>
+        <img src="../../assets/symbol.svg" alt="" style="position:absolute;right:40px;top:36px;height:26px;z-index:3"/>
+      </section>
+
+      <!-- 10 · BACK COVER (white) -->
+      <section data-screen-label="10 Back cover" style="position:relative;flex:none;width:1280px;height:720px;background:#F6F6F6;color:#0F0E14;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:44px">
+        <i class="hn hn-chart-network" style="position:absolute;right:-70px;top:-70px;font-size:300px;color:var(--violet-500);opacity:.07"></i>
+        <i class="hn hn-sparkles" style="position:absolute;left:-50px;bottom:-70px;font-size:240px;color:var(--blue-500);opacity:.07"></i>
+        <img src="../../assets/logo-horizontal.svg" alt="SIMON THINKS" style="height:88px"/>
+        <div style="display:flex;gap:28px;font-family:var(--font-mono);font-size:14px;letter-spacing:.06em;color:var(--text-secondary)">
+          <span style="display:flex;align-items:center;gap:8px"><i class="hn hn-globe" style="font-size:16px;color:var(--violet-600)"></i>simonthinks.ai</span>
+          <span style="display:flex;align-items:center;gap:8px"><i class="hn hn-envelope" style="font-size:16px;color:var(--violet-600)"></i>hola@simonthinks.ai</span>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- NAV (outside scaled stage) -->
+  <button onClick="{{ prev }}" aria-label="Anterior" style="position:fixed;left:24px;top:50%;transform:translateY(-50%);width:46px;height:46px;border-radius:50%;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.06);color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(6px)">
+    <i class="hn hn-angle-left" style="font-size:22px"></i>
+  </button>
+  <button onClick="{{ next }}" aria-label="Siguiente" style="position:fixed;right:24px;top:50%;transform:translateY(-50%);width:46px;height:46px;border-radius:50%;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.06);color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(6px)">
+    <i class="hn hn-angle-right" style="font-size:22px"></i>
+  </button>
+  <div style="position:fixed;bottom:22px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:14px;padding:9px 16px;border-radius:999px;background:rgba(20,18,28,.7);border:1px solid rgba(255,255,255,.12);backdrop-filter:blur(8px)">
+    <div ref="{{ dotsRef }}" style="display:flex;gap:8px">
+      <sc-for list="{{ dots }}" as="d" hint-placeholder-count="14">
+        <button onClick="{{ d.go }}" aria-label="Ir al slide" style="width:8px;height:8px;border-radius:50%;border:none;padding:0;cursor:pointer;transition:background .2s,box-shadow .2s;background:rgba(255,255,255,.3)"></button>
+      </sc-for>
+    </div>
+    <span style="font-family:var(--font-mono);font-size:11px;letter-spacing:.1em;color:rgba(255,255,255,.6)">{{ pageLabel }}</span>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { i: 0 };
+  _scale = 1;
+
+  get TOTAL() { return 14; }
+
+  componentDidMount() {
+    this._fit = () => {
+      this._scale = Math.min(window.innerWidth / 1280, window.innerHeight / 720);
+      this._apply();
+    };
+    this._key = (e) => {
+      if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') { e.preventDefault(); this.next(); }
+      else if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); this.prev(); }
+      else if (e.key === 'Home') this.go(0);
+      else if (e.key === 'End') this.go(this.TOTAL - 1);
+    };
+    this._fit();
+    window.addEventListener('resize', this._fit);
+    window.addEventListener('keydown', this._key);
+  }
+  componentWillUnmount() {
+    window.removeEventListener('resize', this._fit);
+    window.removeEventListener('keydown', this._key);
+  }
+  componentDidUpdate() { this._apply(); }
+
+  _apply() {
+    const i = this.state.i;
+    if (this.scalerEl) this.scalerEl.style.transform = 'scale(' + (this._scale || 1) + ')';
+    if (this.trackEl) this.trackEl.style.transform = 'translateX(' + (-i * 1280) + 'px)';
+    if (this.dotsEl) {
+      const k = this.dotsEl.children;
+      for (let n = 0; n < k.length; n++) {
+        k[n].style.background = n === i ? 'var(--violet-400)' : 'rgba(255,255,255,.3)';
+        k[n].style.boxShadow = n === i ? '0 0 0 3px rgba(157,80,255,.3)' : 'none';
+      }
+    }
+  }
+
+  next() { this.setState(s => ({ i: Math.min(s.i + 1, this.TOTAL - 1) })); }
+  prev() { this.setState(s => ({ i: Math.max(s.i - 1, 0) })); }
+  go(n) { this.setState({ i: n }); }
+
+  renderVals() {
+    const i = this.state.i;
+    const dots = [];
+    for (let n = 0; n < this.TOTAL; n++) dots.push({ idx: n, go: () => this.go(n) });
+    return {
+      i,
+      scalerRef: (el) => { this.scalerEl = el; this._apply(); },
+      trackRef: (el) => { this.trackEl = el; this._apply(); },
+      dotsRef: (el) => { this.dotsEl = el; this._apply(); },
+      next: () => this.next(),
+      prev: () => this.prev(),
+      dots,
+      pageLabel: String(i + 1).padStart(2, '0') + ' / ' + String(this.TOTAL).padStart(2, '0')
+    };
+  }
+}
+</script>
+</body>
+</html>

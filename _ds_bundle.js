@@ -1,4 +1,4 @@
-/* @ds-bundle: {"format":3,"namespace":"SIMONTHINKSDesignSystem_ae45ac","components":[{"name":"ModuleNode","sourcePath":"components/brand/ModuleNode.jsx"},{"name":"BarChart","sourcePath":"components/charts/BarChart.jsx"},{"name":"DonutChart","sourcePath":"components/charts/DonutChart.jsx"},{"name":"LineChart","sourcePath":"components/charts/LineChart.jsx"},{"name":"Sparkline","sourcePath":"components/charts/Sparkline.jsx"},{"name":"CHART_COLORS","sourcePath":"components/charts/chartUtils.jsx"},{"name":"Legend","sourcePath":"components/charts/chartUtils.jsx"},{"name":"Avatar","sourcePath":"components/core/Avatar.jsx"},{"name":"AvatarGroup","sourcePath":"components/core/AvatarGroup.jsx"},{"name":"Badge","sourcePath":"components/core/Badge.jsx"},{"name":"Button","sourcePath":"components/core/Button.jsx"},{"name":"Card","sourcePath":"components/core/Card.jsx"},{"name":"IconButton","sourcePath":"components/core/IconButton.jsx"},{"name":"Tag","sourcePath":"components/core/Tag.jsx"},{"name":"Accordion","sourcePath":"components/data/Accordion.jsx"},{"name":"Table","sourcePath":"components/data/Table.jsx"},{"name":"Alert","sourcePath":"components/feedback/Alert.jsx"},{"name":"Drawer","sourcePath":"components/feedback/Drawer.jsx"},{"name":"Modal","sourcePath":"components/feedback/Modal.jsx"},{"name":"Progress","sourcePath":"components/feedback/Progress.jsx"},{"name":"ProgressRing","sourcePath":"components/feedback/Progress.jsx"},{"name":"Skeleton","sourcePath":"components/feedback/Skeleton.jsx"},{"name":"Toast","sourcePath":"components/feedback/Toast.jsx"},{"name":"ToastStack","sourcePath":"components/feedback/Toast.jsx"},{"name":"Tooltip","sourcePath":"components/feedback/Tooltip.jsx"},{"name":"Checkbox","sourcePath":"components/forms/Checkbox.jsx"},{"name":"Input","sourcePath":"components/forms/Input.jsx"},{"name":"RadioGroup","sourcePath":"components/forms/RadioGroup.jsx"},{"name":"Select","sourcePath":"components/forms/Select.jsx"},{"name":"Switch","sourcePath":"components/forms/Switch.jsx"},{"name":"Icon","sourcePath":"components/icons/Icon.jsx"},{"name":"Breadcrumb","sourcePath":"components/navigation/Breadcrumb.jsx"},{"name":"Menu","sourcePath":"components/navigation/Menu.jsx"},{"name":"Pagination","sourcePath":"components/navigation/Pagination.jsx"},{"name":"Tabs","sourcePath":"components/navigation/Tabs.jsx"}],"sourceHashes":{"components/brand/ModuleNode.jsx":"452b31d60263","components/charts/BarChart.jsx":"eb195634e317","components/charts/DonutChart.jsx":"f1bc9a47d988","components/charts/LineChart.jsx":"aa6d75ab5c4a","components/charts/Sparkline.jsx":"c25e2a555e98","components/charts/chartUtils.jsx":"004e9de9eb57","components/core/Avatar.jsx":"16a129fa8eb5","components/core/AvatarGroup.jsx":"bc5f93fe6980","components/core/Badge.jsx":"b377632341dd","components/core/Button.jsx":"fe91116855b5","components/core/Card.jsx":"12622af2a51f","components/core/IconButton.jsx":"67f0a2c7d160","components/core/Tag.jsx":"510bbcce6b5f","components/data/Accordion.jsx":"bd236b972a6e","components/data/Table.jsx":"7ff61ff9afa1","components/feedback/Alert.jsx":"6076d2c7b850","components/feedback/Drawer.jsx":"0ca3b84603f5","components/feedback/Modal.jsx":"a00c7ae292f2","components/feedback/Progress.jsx":"5d55a53da3cf","components/feedback/Skeleton.jsx":"fcf3a33ac9ac","components/feedback/Toast.jsx":"f0accbb62264","components/feedback/Tooltip.jsx":"328999359133","components/forms/Checkbox.jsx":"a73b15f119ca","components/forms/Input.jsx":"a2c4d56e763c","components/forms/RadioGroup.jsx":"fb6d99bbe1f1","components/forms/Select.jsx":"6b8293aa20fc","components/forms/Switch.jsx":"36b950eacb59","components/icons/Icon.jsx":"56a370ba4db7","components/navigation/Breadcrumb.jsx":"6b70c7f8be38","components/navigation/Menu.jsx":"833001f006e9","components/navigation/Pagination.jsx":"3dfaf6b703ee","components/navigation/Tabs.jsx":"ee8283a152fa","integrations/tailwind.preset.js":"ebe3fa5ae295"},"inlinedExternals":[],"unexposedExports":[{"name":"ensureChartCss","sourcePath":"components/charts/chartUtils.jsx"},{"name":"niceMax","sourcePath":"components/charts/chartUtils.jsx"}]} */
+/* @ds-bundle: {"format":3,"namespace":"SIMONTHINKSDesignSystem_ae45ac","components":[{"name":"ModuleNode","sourcePath":"components/brand/ModuleNode.jsx"},{"name":"BarChart","sourcePath":"components/charts/BarChart.jsx"},{"name":"DonutChart","sourcePath":"components/charts/DonutChart.jsx"},{"name":"LineChart","sourcePath":"components/charts/LineChart.jsx"},{"name":"Sparkline","sourcePath":"components/charts/Sparkline.jsx"},{"name":"CHART_COLORS","sourcePath":"components/charts/chartUtils.jsx"},{"name":"Legend","sourcePath":"components/charts/chartUtils.jsx"},{"name":"Avatar","sourcePath":"components/core/Avatar.jsx"},{"name":"AvatarGroup","sourcePath":"components/core/AvatarGroup.jsx"},{"name":"Badge","sourcePath":"components/core/Badge.jsx"},{"name":"Button","sourcePath":"components/core/Button.jsx"},{"name":"Card","sourcePath":"components/core/Card.jsx"},{"name":"IconButton","sourcePath":"components/core/IconButton.jsx"},{"name":"Tag","sourcePath":"components/core/Tag.jsx"},{"name":"Accordion","sourcePath":"components/data/Accordion.jsx"},{"name":"Table","sourcePath":"components/data/Table.jsx"},{"name":"Alert","sourcePath":"components/feedback/Alert.jsx"},{"name":"Drawer","sourcePath":"components/feedback/Drawer.jsx"},{"name":"Modal","sourcePath":"components/feedback/Modal.jsx"},{"name":"Progress","sourcePath":"components/feedback/Progress.jsx"},{"name":"ProgressRing","sourcePath":"components/feedback/Progress.jsx"},{"name":"Skeleton","sourcePath":"components/feedback/Skeleton.jsx"},{"name":"Toast","sourcePath":"components/feedback/Toast.jsx"},{"name":"ToastStack","sourcePath":"components/feedback/Toast.jsx"},{"name":"Tooltip","sourcePath":"components/feedback/Tooltip.jsx"},{"name":"Checkbox","sourcePath":"components/forms/Checkbox.jsx"},{"name":"Input","sourcePath":"components/forms/Input.jsx"},{"name":"RadioGroup","sourcePath":"components/forms/RadioGroup.jsx"},{"name":"Select","sourcePath":"components/forms/Select.jsx"},{"name":"Switch","sourcePath":"components/forms/Switch.jsx"},{"name":"Icon","sourcePath":"components/icons/Icon.jsx"},{"name":"Breadcrumb","sourcePath":"components/navigation/Breadcrumb.jsx"},{"name":"Menu","sourcePath":"components/navigation/Menu.jsx"},{"name":"Pagination","sourcePath":"components/navigation/Pagination.jsx"},{"name":"Tabs","sourcePath":"components/navigation/Tabs.jsx"}],"sourceHashes":{"components/brand/ModuleNode.jsx":"7ff26badfac8","components/charts/BarChart.jsx":"eb195634e317","components/charts/DonutChart.jsx":"f1bc9a47d988","components/charts/LineChart.jsx":"aa6d75ab5c4a","components/charts/Sparkline.jsx":"c25e2a555e98","components/charts/chartUtils.jsx":"004e9de9eb57","components/core/Avatar.jsx":"16a129fa8eb5","components/core/AvatarGroup.jsx":"bc5f93fe6980","components/core/Badge.jsx":"b377632341dd","components/core/Button.jsx":"fe91116855b5","components/core/Card.jsx":"12622af2a51f","components/core/IconButton.jsx":"67f0a2c7d160","components/core/Tag.jsx":"510bbcce6b5f","components/data/Accordion.jsx":"bd236b972a6e","components/data/Table.jsx":"7ff61ff9afa1","components/feedback/Alert.jsx":"6076d2c7b850","components/feedback/Drawer.jsx":"0ca3b84603f5","components/feedback/Modal.jsx":"a00c7ae292f2","components/feedback/Progress.jsx":"5d55a53da3cf","components/feedback/Skeleton.jsx":"fcf3a33ac9ac","components/feedback/Toast.jsx":"f0accbb62264","components/feedback/Tooltip.jsx":"328999359133","components/forms/Checkbox.jsx":"a73b15f119ca","components/forms/Input.jsx":"a2c4d56e763c","components/forms/RadioGroup.jsx":"fb6d99bbe1f1","components/forms/Select.jsx":"6b8293aa20fc","components/forms/Switch.jsx":"36b950eacb59","components/icons/Icon.jsx":"56a370ba4db7","components/navigation/Breadcrumb.jsx":"6b70c7f8be38","components/navigation/Menu.jsx":"833001f006e9","components/navigation/Pagination.jsx":"3dfaf6b703ee","components/navigation/Tabs.jsx":"ee8283a152fa","integrations/tailwind.preset.js":"ebe3fa5ae295"},"inlinedExternals":[],"unexposedExports":[{"name":"ensureChartCss","sourcePath":"components/charts/chartUtils.jsx"},{"name":"niceMax","sourcePath":"components/charts/chartUtils.jsx"}]} */
 
 (() => {
 
@@ -55,11 +55,11 @@ const GLYPHS = {
     strokeLinecap: "round",
     strokeLinejoin: "round"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M9.5 2A7 7 0 0 1 16 12c0 1.5-.5 2-1 3l-.5 1H9.5L9 15c-.5-1-1-1.5-1-3a7 7 0 0 1 1.5-10Z"
+    d: "M12 5a3 3 0 0 0-3 3 2.5 2.5 0 0 0-2 4 2.5 2.5 0 0 0 1 4.5A2.5 2.5 0 0 0 12 19Z"
   }), /*#__PURE__*/React.createElement("path", {
-    d: "M9 19h6"
+    d: "M12 5a3 3 0 0 1 3 3 2.5 2.5 0 0 1 2 4 2.5 2.5 0 0 1-1 4.5A2.5 2.5 0 0 1 12 19Z"
   }), /*#__PURE__*/React.createElement("path", {
-    d: "M10 22h4"
+    d: "M12 5v14"
   })),
   core: /*#__PURE__*/React.createElement("svg", {
     viewBox: "0 0 24 24",
@@ -68,20 +68,12 @@ const GLYPHS = {
     strokeWidth: "2",
     strokeLinecap: "round",
     strokeLinejoin: "round"
-  }, /*#__PURE__*/React.createElement("rect", {
-    x: "4",
-    y: "4",
-    width: "16",
-    height: "16",
-    rx: "2"
-  }), /*#__PURE__*/React.createElement("rect", {
-    x: "9",
-    y: "9",
-    width: "6",
-    height: "6",
-    rx: "1"
+  }, /*#__PURE__*/React.createElement("path", {
+    d: "M12 2 2 7l10 5 10-5-10-5Z"
   }), /*#__PURE__*/React.createElement("path", {
-    d: "M9 2v2M15 2v2M9 20v2M15 20v2M2 9h2M2 15h2M20 9h2M20 15h2"
+    d: "M2 12l10 5 10-5"
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M2 17l10 5 10-5"
   })),
   custom: /*#__PURE__*/React.createElement("svg", {
     viewBox: "0 0 24 24",
@@ -90,12 +82,24 @@ const GLYPHS = {
     strokeWidth: "2",
     strokeLinecap: "round",
     strokeLinejoin: "round"
-  }, /*#__PURE__*/React.createElement("path", {
-    d: "M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"
+  }, /*#__PURE__*/React.createElement("line", {
+    x1: "4",
+    y1: "8",
+    x2: "20",
+    y2: "8"
+  }), /*#__PURE__*/React.createElement("line", {
+    x1: "4",
+    y1: "16",
+    x2: "20",
+    y2: "16"
   }), /*#__PURE__*/React.createElement("circle", {
-    cx: "12",
-    cy: "12",
-    r: "3"
+    cx: "9",
+    cy: "8",
+    r: "2.4"
+  }), /*#__PURE__*/React.createElement("circle", {
+    cx: "15",
+    cy: "16",
+    r: "2.4"
   })),
   light: /*#__PURE__*/React.createElement("svg", {
     viewBox: "0 0 24 24",
@@ -105,7 +109,11 @@ const GLYPHS = {
     strokeLinecap: "round",
     strokeLinejoin: "round"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M13 2 4 14h7l-1 8 9-12h-7l1-8Z"
+    d: "M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5l6.74-6.76Z"
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M16 8 2 22"
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M17.5 15H9"
   }))
 };
 function ModuleNode({

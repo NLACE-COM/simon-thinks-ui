@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="Social posts" description="Kit de posts para redes — formatos 1:1, 4:5 y 9:16 con imágenes y vídeo del banco de media y el logo vertical como firma." -->
+<helmet><script src="./ds-base.js"></script></helmet>
+<div style="min-height:100vh;background:var(--bg-canvas);display:flex;flex-wrap:wrap;align-items:flex-start;justify-content:center;gap:36px;padding:52px 40px;font-family:var(--font-body);box-sizing:border-box">
+
+  <!-- 1 · Firma 1:1 — imagen iridiscente + logo vertical -->
+  <figure style="display:flex;flex-direction:column;align-items:center;gap:14px;margin:0">
+    <div style="width:344px;height:344px;border-radius:22px;overflow:hidden;position:relative;box-shadow:var(--shadow-lg);display:flex;flex-direction:column;justify-content:space-between;padding:30px;box-sizing:border-box;background:var(--violet-50)">
+      <img src="../../assets/media/optimized/images/197753132_10864256-card.webp" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+      <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(244,238,255,.97) 2%,rgba(244,238,255,.45) 34%,rgba(244,238,255,0) 62%)"></div>
+      <img src="../../assets/logo-vertical.svg" alt="SIMON THINKS" style="position:relative;z-index:2;height:64px;align-self:flex-start">
+      <div style="position:relative;z-index:2;display:flex;flex-direction:column;gap:10px">
+        <h2 style="font-family:var(--font-display);font-weight:600;font-size:27px;letter-spacing:-.022em;line-height:1.04;margin:0;color:var(--ink-950)">Convierte conocimiento en <em style="font-style:normal;color:var(--violet-600)">decisiones.</em></h2>
+        <span style="font-family:var(--font-mono);font-size:11px;letter-spacing:.06em;color:var(--violet-700)">// gobernanza de IA, sin ruido</span>
+      </div>
+    </div>
+    <figcaption style="font-family:var(--font-mono);font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--text-muted)">Firma 1:1 — feed / anuncio</figcaption>
+  </figure>
+
+  <!-- 2 · Declaración 1:1 — ink + esferas violeta -->
+  <figure style="display:flex;flex-direction:column;align-items:center;gap:14px;margin:0">
+    <div style="width:344px;height:344px;border-radius:22px;overflow:hidden;position:relative;box-shadow:var(--shadow-lg);display:flex;flex-direction:column;justify-content:space-between;padding:30px;box-sizing:border-box;background:var(--ink-950);color:#fff">
+      <img src="../../assets/media/optimized/images/2150439135-card.webp" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.5">
+      <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(11,11,15,.25),rgba(11,11,15,.9))"></div>
+      <img src="../../assets/logo-vertical-white.svg" alt="SIMON THINKS" style="position:relative;z-index:2;height:58px;align-self:flex-start">
+      <div style="position:relative;z-index:2;display:flex;flex-direction:column;gap:14px">
+        <h2 style="font-family:var(--font-display);font-weight:600;font-size:23px;letter-spacing:-.01em;line-height:1.16;margin:0">El sistema piensa <em style="font-style:normal;color:var(--violet-300)">con</em> tu organización, no por encima de ella.</h2>
+        <span style="font-family:var(--font-mono);font-size:11px;letter-spacing:.06em;color:var(--ink-400)">simonthinks.ai</span>
+      </div>
+    </div>
+    <figcaption style="font-family:var(--font-mono);font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--text-muted)">Declaración 1:1 — cita</figcaption>
+  </figure>
+
+  <!-- 3 · Historia 9:16 — vídeo iridiscente -->
+  <figure style="display:flex;flex-direction:column;align-items:center;gap:14px;margin:0">
+    <div style="width:242px;height:430px;border-radius:22px;overflow:hidden;position:relative;box-shadow:var(--shadow-lg);display:flex;flex-direction:column;justify-content:space-between;padding:24px;box-sizing:border-box;background:var(--ink-950);color:#fff">
+      <video src="../../assets/media/optimized/videos/0_Abstract_Iridescent_1280x720.mp4" poster="../../assets/media/optimized/videos/0_Abstract_Iridescent_1280x720-poster.jpg" autoplay muted loop playsinline style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></video>
+      <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(11,11,15,.5),rgba(11,11,15,0) 38%,rgba(11,11,15,.86))"></div>
+      <img src="../../assets/logo-vertical-white.svg" alt="SIMON THINKS" style="position:relative;z-index:2;height:48px;align-self:flex-start">
+      <div style="position:relative;z-index:2;display:flex;flex-direction:column;gap:10px">
+        <h2 style="font-family:var(--font-display);font-weight:600;font-size:25px;letter-spacing:-.02em;line-height:1.08;margin:0">Conocimiento que se vuelve <em style="font-style:normal;color:var(--violet-300)">acción.</em></h2>
+        <span style="font-family:var(--font-mono);font-size:11px;letter-spacing:.06em;color:var(--ink-400)">// reel · 9:16</span>
+      </div>
+    </div>
+    <figcaption style="font-family:var(--font-mono);font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--text-muted)">Historia 9:16 — reel</figcaption>
+  </figure>
+
+  <!-- 4 · Lockup 9:16 — logo vertical protagonista -->
+  <figure style="display:flex;flex-direction:column;align-items:center;gap:14px;margin:0">
+    <div style="width:242px;height:430px;border-radius:22px;overflow:hidden;position:relative;box-shadow:var(--shadow-lg);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;padding:30px;box-sizing:border-box;background:linear-gradient(165deg,var(--violet-100),#ffffff 78%)">
+      <img src="../../assets/logo-vertical.svg" alt="SIMON THINKS" style="height:104px">
+      <span style="font-family:var(--font-mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--violet-700);text-align:center;line-height:1.7">Gobernanza de IA<br>Decisiones reales</span>
+      <span style="position:absolute;bottom:24px;font-family:var(--font-mono);font-size:11px;letter-spacing:.04em;color:var(--text-muted)">simonthinks.ai</span>
+    </div>
+    <figcaption style="font-family:var(--font-mono);font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--text-muted)">Lockup 9:16 — apertura</figcaption>
+  </figure>
+
+  <!-- 5 · Retrato 4:5 — imagen onda pastel -->
+  <figure style="display:flex;flex-direction:column;align-items:center;gap:14px;margin:0">
+    <div style="width:344px;height:430px;border-radius:22px;overflow:hidden;position:relative;box-shadow:var(--shadow-lg);display:flex;flex-direction:column;justify-content:space-between;padding:30px;box-sizing:border-box;background:var(--violet-50)">
+      <img src="../../assets/media/optimized/images/2151991157-card.webp" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+      <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(247,243,255,.97) 4%,rgba(247,243,255,.4) 40%,rgba(247,243,255,0) 66%)"></div>
+      <img src="../../assets/logo-vertical.svg" alt="SIMON THINKS" style="position:relative;z-index:2;height:60px;align-self:flex-start">
+      <div style="position:relative;z-index:2;display:flex;flex-direction:column;gap:10px">
+        <h2 style="font-family:var(--font-display);font-weight:600;font-size:30px;letter-spacing:-.022em;line-height:1.02;margin:0;color:var(--ink-950)">Decide con <em style="font-style:normal;color:var(--violet-600)">evidencia</em>, no con ruido.</h2>
+        <span style="font-family:var(--font-mono);font-size:11px;letter-spacing:.06em;color:var(--violet-700)">// contexto en cada decisión</span>
+      </div>
+    </div>
+    <figcaption style="font-family:var(--font-mono);font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--text-muted)">Retrato 4:5 — feed</figcaption>
+  </figure>
+
+  <!-- 6 · Loop 1:1 — vídeo network nodes -->
+  <figure style="display:flex;flex-direction:column;align-items:center;gap:14px;margin:0">
+    <div style="width:344px;height:344px;border-radius:22px;overflow:hidden;position:relative;box-shadow:var(--shadow-lg);display:flex;flex-direction:column;justify-content:space-between;padding:30px;box-sizing:border-box;background:var(--ink-950);color:#fff">
+      <video src="../../assets/media/optimized/videos/0_Network_Nodes_1280x720.mp4" poster="../../assets/media/optimized/videos/0_Network_Nodes_1280x720-poster.jpg" autoplay muted loop playsinline style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.72"></video>
+      <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(11,11,15,.35),rgba(11,11,15,.88))"></div>
+      <img src="../../assets/logo-vertical-white.svg" alt="SIMON THINKS" style="position:relative;z-index:2;height:54px;align-self:flex-start">
+      <div style="position:relative;z-index:2;display:flex;flex-direction:column;gap:10px">
+        <h2 style="font-family:var(--font-display);font-weight:600;font-size:23px;letter-spacing:-.012em;line-height:1.14;margin:0">Cada decisión, conectada a su <em style="font-style:normal;color:var(--violet-300)">contexto.</em></h2>
+        <span style="font-family:var(--font-mono);font-size:11px;letter-spacing:.06em;color:var(--ink-400)">// loop ambiente</span>
+      </div>
+    </div>
+    <figcaption style="font-family:var(--font-mono);font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--text-muted)">Loop 1:1 — ambiente</figcaption>
+  </figure>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1240,&quot;height&quot;:980}}"></script>
+</body>
+</html>
