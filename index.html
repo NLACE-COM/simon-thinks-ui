@@ -192,6 +192,32 @@
     text-transform:uppercase;color:var(--violet-600);background:var(--violet-50);
     border:1px solid var(--violet-200);border-radius:var(--radius-pill);padding:3px 10px}
   .applead .ds{font-size:var(--text-sm);color:var(--text-secondary)}
+  .artframe{width:100%;display:block;border:0;background:var(--bg-canvas)}
+
+  /* ---------- IMAGERY ---------- */
+  .imagery{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-6)}
+  @media(max-width:880px){.imagery{grid-template-columns:1fr}}
+  .imagery figure{margin:0;position:relative;border-radius:var(--radius-lg);overflow:hidden;
+    border:1px solid var(--border-subtle);aspect-ratio:4/3}
+  .imagery img{width:100%;height:100%;object-fit:cover;display:block}
+  .imagery figcaption{position:absolute;left:0;right:0;bottom:0;padding:var(--space-4);
+    font-family:var(--font-mono);font-size:var(--text-2xs);letter-spacing:var(--tracking-wide);
+    text-transform:uppercase;color:#fff;
+    background:linear-gradient(transparent,color-mix(in srgb,var(--ink-950) 82%,transparent))}
+
+  /* ---------- ICONOGRAPHY ---------- */
+  .shead code{font-family:var(--font-mono);font-size:.86em;background:var(--bg-subtle);
+    border:1px solid var(--border-subtle);border-radius:6px;padding:2px 7px;color:var(--text-secondary)}
+  .iconwall{display:grid;grid-template-columns:repeat(8,1fr);gap:var(--space-3)}
+  @media(max-width:880px){.iconwall{grid-template-columns:repeat(4,1fr)}}
+  .ico{display:flex;flex-direction:column;align-items:center;gap:9px;padding:var(--space-5) var(--space-2);
+    border:1px solid var(--border-subtle);border-radius:var(--radius-md);background:var(--bg-surface);
+    transition:border-color .15s}
+  .ico:hover{border-color:var(--violet-300)}
+  .ico .hn{font-size:24px;color:var(--text-primary);transition:color .15s}
+  .ico:hover .hn{color:var(--violet-500)}
+  .ico span{font-family:var(--font-mono);font-size:10px;color:var(--text-muted);
+    letter-spacing:.02em;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 
   /* footer */
   .foot{background:var(--ink-950);color:#fff;padding:var(--space-16) 0 var(--space-12)}
@@ -224,6 +250,7 @@
       <a href="#fundamentos">Fundamentos</a>
       <a href="#color">Color</a>
       <a href="#tipografia">Tipografía</a>
+      <a href="#iconos">Iconos</a>
       <a href="#componentes">Componentes</a>
       <a href="#aplicaciones">Aplicaciones</a>
     </div>
@@ -291,6 +318,13 @@
           <img src="./assets/symbol.svg" alt="Símbolo ink"></div>
       </div>
     </div>
+
+    <div class="sub"><span class="t">Imágenes de marca</span><span class="ln"></span></div>
+    <div class="imagery">
+      <figure><img src="./assets/ref/iridescent.jpg" alt="Iridiscencia de marca" loading="lazy"><figcaption>Iridiscencia · firma</figcaption></figure>
+      <figure><img src="./assets/ref/tech-violet.jpg" alt="Tecnología en violeta" loading="lazy"><figcaption>Tecnología · violeta</figcaption></figure>
+      <figure><img src="./assets/ref/collab.jpg" alt="Colaboración humana" loading="lazy"><figcaption>Colaboración · humano</figcaption></figure>
+    </div>
   </div>
 </section>
 
@@ -324,11 +358,72 @@
   </div>
 </section>
 
+<!-- ===================== ICONOGRAFÍA ===================== -->
+<section id="iconos" style="background:var(--bg-surface);border-top:1px solid var(--border-subtle);border-bottom:1px solid var(--border-subtle)">
+  <div class="container">
+    <div class="shead">
+      <span class="eyebrow">04 · Iconografía</span>
+      <h2>578 glifos, una sola fuente.</h2>
+      <p>La <strong>Pixel Icon</strong> font cubre toda la UI — línea y <em>solid</em>, alineadas a la grilla. Uso en HTML plano: <code>&lt;i class="hn hn-search"&gt;&lt;/i&gt;</code>.</p>
+    </div>
+    <div class="iconwall">
+      <div class="ico"><i class="hn hn-sitemap"></i><span>sitemap</span></div>
+      <div class="ico"><i class="hn hn-chart-network"></i><span>chart-network</span></div>
+      <div class="ico"><i class="hn hn-analytics"></i><span>analytics</span></div>
+      <div class="ico"><i class="hn hn-chart-line"></i><span>chart-line</span></div>
+      <div class="ico"><i class="hn hn-robot"></i><span>robot</span></div>
+      <div class="ico"><i class="hn hn-lightbulb"></i><span>lightbulb</span></div>
+      <div class="ico"><i class="hn hn-code"></i><span>code</span></div>
+      <div class="ico"><i class="hn hn-bolt"></i><span>bolt</span></div>
+      <div class="ico"><i class="hn hn-check-circle"></i><span>check-circle</span></div>
+      <div class="ico"><i class="hn hn-lock"></i><span>lock</span></div>
+      <div class="ico"><i class="hn hn-eye"></i><span>eye</span></div>
+      <div class="ico"><i class="hn hn-check"></i><span>check</span></div>
+      <div class="ico"><i class="hn hn-times"></i><span>times</span></div>
+      <div class="ico"><i class="hn hn-filter"></i><span>filter</span></div>
+      <div class="ico"><i class="hn hn-search"></i><span>search</span></div>
+      <div class="ico"><i class="hn hn-table"></i><span>table</span></div>
+      <div class="ico"><i class="hn hn-grid"></i><span>grid</span></div>
+      <div class="ico"><i class="hn hn-bars"></i><span>bars</span></div>
+      <div class="ico"><i class="hn hn-bolt-solid"></i><span>bolt·solid</span></div>
+      <div class="ico"><i class="hn hn-folder"></i><span>folder</span></div>
+      <div class="ico"><i class="hn hn-archive"></i><span>archive</span></div>
+      <div class="ico"><i class="hn hn-bookmark"></i><span>bookmark</span></div>
+      <div class="ico"><i class="hn hn-tag"></i><span>tag</span></div>
+      <div class="ico"><i class="hn hn-flag"></i><span>flag</span></div>
+      <div class="ico"><i class="hn hn-star"></i><span>star</span></div>
+      <div class="ico"><i class="hn hn-heart"></i><span>heart</span></div>
+      <div class="ico"><i class="hn hn-bell"></i><span>bell</span></div>
+      <div class="ico"><i class="hn hn-comment"></i><span>comment</span></div>
+      <div class="ico"><i class="hn hn-comments"></i><span>comments</span></div>
+      <div class="ico"><i class="hn hn-envelope"></i><span>envelope</span></div>
+      <div class="ico"><i class="hn hn-share"></i><span>share</span></div>
+      <div class="ico"><i class="hn hn-link"></i><span>link</span></div>
+      <div class="ico"><i class="hn hn-globe"></i><span>globe</span></div>
+      <div class="ico"><i class="hn hn-cloud"></i><span>cloud</span></div>
+      <div class="ico"><i class="hn hn-download"></i><span>download</span></div>
+      <div class="ico"><i class="hn hn-upload"></i><span>upload</span></div>
+      <div class="ico"><i class="hn hn-copy"></i><span>copy</span></div>
+      <div class="ico"><i class="hn hn-pen"></i><span>pen</span></div>
+      <div class="ico"><i class="hn hn-trash"></i><span>trash</span></div>
+      <div class="ico"><i class="hn hn-plus"></i><span>plus</span></div>
+      <div class="ico"><i class="hn hn-arrow-right"></i><span>arrow-right</span></div>
+      <div class="ico"><i class="hn hn-clock"></i><span>clock</span></div>
+      <div class="ico"><i class="hn hn-user"></i><span>user</span></div>
+      <div class="ico"><i class="hn hn-home"></i><span>home</span></div>
+      <div class="ico"><i class="hn hn-cog"></i><span>cog</span></div>
+      <div class="ico"><i class="hn hn-book"></i><span>book</span></div>
+      <div class="ico"><i class="hn hn-thumbtack"></i><span>thumbtack</span></div>
+      <div class="ico"><i class="hn hn-bookmark-solid"></i><span>bookmark·solid</span></div>
+    </div>
+  </div>
+</section>
+
 <!-- ===================== TOKENS ===================== -->
 <section style="background:var(--bg-surface);border-top:1px solid var(--border-subtle);border-bottom:1px solid var(--border-subtle)">
   <div class="container">
     <div class="shead">
-      <span class="eyebrow">04 · Tokens de forma</span>
+      <span class="eyebrow">05 · Tokens de forma</span>
       <h2>Todo encaja en la grilla.</h2>
       <p>Base de 4px. El radio evoca los bloques redondeados de la marca. Las sombras son discretas; el glow violeta se reserva para los nodos activos.</p>
     </div>
@@ -344,7 +439,7 @@
 <section id="componentes">
   <div class="container">
     <div class="shead">
-      <span class="eyebrow">05 · Componentes</span>
+      <span class="eyebrow">06 · Componentes</span>
       <h2>38 componentes, listos para gobernar.</h2>
       <p>Acción, formularios, navegación, datos, feedback y visualización — renderizados en vivo desde el bundle del sistema.</p>
     </div>
@@ -386,7 +481,7 @@
 <section id="aplicaciones" style="background:var(--bg-surface);border-top:1px solid var(--border-subtle)">
   <div class="container">
     <div class="shead">
-      <span class="eyebrow">06 · Aplicaciones</span>
+      <span class="eyebrow">07 · Aplicaciones</span>
       <h2>El sistema, aplicado.</h2>
       <p>Los tokens y componentes compuestos en superficies reales: landing, producto, informe gobernado y formatos sociales.</p>
     </div>
@@ -425,6 +520,22 @@
       <figure class="kit">
         <figcaption><span class="nm">Social — formatos 1:1</span><span class="vp">guidelines/app-social</span></figcaption>
         <div class="kit-stage"><iframe class="kit-frame" data-w="1200" data-h="660" src="./guidelines/app-social.card.html" loading="lazy" title="Formatos sociales 1:1"></iframe></div>
+      </figure>
+    </div>
+
+    <div class="sub"><span class="t">Plantillas — deck &amp; social</span><span class="ln"></span></div>
+    <div class="applead">
+      <span class="badge">Live</span>
+      <span class="ds">Plantillas editoriales del kit, interactivas y con su media real — el deck navega con las flechas; los social posts incluyen video.</span>
+    </div>
+    <div class="apps">
+      <figure class="kit">
+        <figcaption><span class="nm">Deck de presentación — 14 slides</span><span class="vp">templates/simon-thinks-deck</span></figcaption>
+        <iframe class="artframe" style="aspect-ratio:16/9" src="./templates/simon-thinks-deck/SimonThinksDeck.dc.html" loading="lazy" title="Deck de presentación SIMON THINKS"></iframe>
+      </figure>
+      <figure class="kit">
+        <figcaption><span class="nm">Social posts — formatos 1:1 con video</span><span class="vp">templates/social-posts</span></figcaption>
+        <iframe class="artframe" style="aspect-ratio:1200/660" src="./templates/social-posts/SocialPosts.dc.html" loading="lazy" title="Plantillas de social posts"></iframe>
       </figure>
     </div>
   </div>
