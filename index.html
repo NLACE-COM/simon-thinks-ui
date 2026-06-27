@@ -23,10 +23,16 @@
   .nav .links a{font-family:var(--font-mono);font-size:var(--text-2xs);letter-spacing:var(--tracking-wide);
     text-transform:uppercase;color:var(--text-secondary);text-decoration:none;transition:color .15s}
   .nav .links a:hover{color:var(--text-accent)}
+  .nav .actions{display:flex;align-items:center;gap:var(--space-5)}
+  .nav .repo{display:inline-flex;align-items:center;gap:7px;text-decoration:none;
+    font-family:var(--font-mono);font-size:var(--text-2xs);letter-spacing:var(--tracking-wide);
+    text-transform:uppercase;color:var(--text-secondary);transition:color .15s;white-space:nowrap}
+  .nav .repo svg{width:15px;height:15px}
+  .nav .repo:hover{color:var(--text-accent)}
   .nav .cta{font-family:var(--font-body);font-weight:var(--weight-semibold);font-size:var(--text-sm);
     background:var(--violet-500);color:#fff;border:0;border-radius:var(--radius-pill);padding:9px 18px;
-    cursor:pointer;line-height:1;white-space:nowrap}
-  @media(max-width:880px){.nav .links a{display:none}}
+    cursor:pointer;line-height:1;white-space:nowrap;text-decoration:none;display:inline-flex;align-items:center}
+  @media(max-width:880px){.nav .links a{display:none}.nav .repo span{display:none}}
 
   /* ---------- SECTION CHROME ---------- */
   section{padding:var(--space-24) 0}
@@ -63,7 +69,11 @@
     letter-spacing:var(--tracking-wide);margin-top:6px}
   .hero .visual{position:relative;border-radius:var(--radius-2xl);overflow:hidden;aspect-ratio:1/1;
     border:1px solid rgba(255,255,255,.14);box-shadow:var(--shadow-xl)}
-  .hero .visual img{width:100%;height:100%;object-fit:cover}
+  .hero .visual>img{width:100%;height:100%;object-fit:cover}
+  .hero .visual .scrim{position:absolute;inset:0;
+    background:radial-gradient(120% 120% at 50% 40%,transparent,color-mix(in srgb,var(--ink-950) 62%,transparent))}
+  .hero .visual .mark{position:absolute;z-index:2;left:50%;top:50%;transform:translate(-50%,-50%);
+    width:auto;height:128px;filter:drop-shadow(0 6px 24px rgba(11,11,15,.4))}
   @media(max-width:900px){.hero .wrap{grid-template-columns:1fr}.hero .visual{display:none}.hero h1{font-size:var(--text-4xl)}}
 
   /* ---------- TOKEN GALLERIES ---------- */
@@ -141,6 +151,48 @@
   .apps-2{display:grid;grid-template-columns:0.62fr 1fr;gap:var(--space-8);align-items:start}
   @media(max-width:980px){.apps-2{grid-template-columns:1fr}}
 
+  /* ---------- LOGO SYSTEM ---------- */
+  .logosys{display:grid;grid-template-columns:1.1fr 1fr;gap:var(--space-6)}
+  @media(max-width:880px){.logosys{grid-template-columns:1fr}}
+  .logo-feature{position:relative;overflow:hidden;border-radius:var(--radius-xl);background:var(--ink-950);
+    border:1px solid rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;
+    min-height:360px;padding:var(--space-10)}
+  .logo-feature .glow{position:absolute;width:440px;height:440px;border-radius:50%;left:50%;top:62%;
+    transform:translate(-50%,-50%);pointer-events:none;
+    background:radial-gradient(circle,color-mix(in srgb,var(--violet-500) 40%,transparent),transparent 68%);
+    filter:blur(50px)}
+  .logo-feature img{position:relative;z-index:2;height:172px}
+  .logo-feature .cap{position:absolute;z-index:2;bottom:var(--space-5);left:var(--space-6);
+    font-family:var(--font-mono);font-size:var(--text-2xs);letter-spacing:var(--tracking-wide);
+    text-transform:uppercase;color:var(--ink-400)}
+  .logo-side{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-6)}
+  .logo-tile{position:relative;border:1px solid var(--border-subtle);border-radius:var(--radius-lg);
+    display:flex;align-items:center;justify-content:center;gap:var(--space-5);padding:var(--space-6);
+    min-height:128px;background:var(--bg-surface)}
+  .logo-tile.dark{background:var(--ink-950);border-color:rgba(255,255,255,.12)}
+  .logo-tile .lab{position:absolute;top:10px;left:12px;font-family:var(--font-mono);font-size:10px;
+    letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted)}
+  .logo-tile.dark .lab{color:var(--ink-500)}
+  .logo-tile img{max-height:30px}
+  .logo-tile.vert img{max-height:72px}
+
+  /* ---------- LIVE KIT EMBEDS ---------- */
+  .kitcol{columns:2;column-gap:var(--space-8)}
+  @media(max-width:980px){.kitcol{columns:1}}
+  .kit{break-inside:avoid;margin:0 0 var(--space-8);border:1px solid var(--border-subtle);
+    border-radius:var(--radius-lg);overflow:hidden;background:var(--bg-surface);box-shadow:var(--shadow-sm)}
+  .kit figcaption{display:flex;align-items:center;justify-content:space-between;gap:var(--space-3);
+    padding:11px var(--space-5);border-bottom:1px solid var(--border-subtle);background:var(--bg-subtle)}
+  .kit .nm{font-size:var(--text-sm);font-weight:var(--weight-medium);color:var(--text-primary)}
+  .kit .vp{font-family:var(--font-mono);font-size:var(--text-2xs);color:var(--text-muted)}
+  .kit-stage{position:relative;width:100%;overflow:hidden;background:var(--bg-canvas)}
+  .kit-frame{border:0;display:block;transform-origin:top left;background:var(--bg-canvas)}
+  .applead{display:flex;align-items:baseline;gap:var(--space-3);margin:var(--space-4) 0 var(--space-8)}
+  .applead .badge{font-family:var(--font-mono);font-size:var(--text-2xs);letter-spacing:var(--tracking-wide);
+    text-transform:uppercase;color:var(--violet-600);background:var(--violet-50);
+    border:1px solid var(--violet-200);border-radius:var(--radius-pill);padding:3px 10px}
+  .applead .ds{font-size:var(--text-sm);color:var(--text-secondary)}
+
   /* footer */
   .foot{background:var(--ink-950);color:#fff;padding:var(--space-16) 0 var(--space-12)}
   .foot .row{display:flex;align-items:flex-start;justify-content:space-between;gap:var(--space-8);flex-wrap:wrap}
@@ -151,6 +203,15 @@
   .foot .bottom{margin-top:var(--space-12);padding-top:var(--space-6);border-top:1px solid rgba(255,255,255,.14);
     display:flex;justify-content:space-between;flex-wrap:wrap;gap:var(--space-3);
     font-family:var(--font-mono);font-size:var(--text-2xs);color:var(--ink-400)}
+  .foot .flinks{display:flex;flex-direction:column;gap:var(--space-3);min-width:160px}
+  .foot .flinks .h{font-family:var(--font-mono);font-size:var(--text-2xs);letter-spacing:var(--tracking-wider);
+    text-transform:uppercase;color:var(--ink-500);margin-bottom:var(--space-1)}
+  .foot .flinks a{font-family:var(--font-mono);font-size:var(--text-2xs);letter-spacing:var(--tracking-wide);
+    color:var(--ink-200);text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:color .15s}
+  .foot .flinks a:hover{color:#fff}
+  .foot .flinks svg{width:14px;height:14px;flex:none}
+  .foot .bottom a{color:var(--ink-400);text-decoration:none;transition:color .15s}
+  .foot .bottom a:hover{color:#fff}
 </style>
 </head>
 <body>
@@ -166,7 +227,13 @@
       <a href="#componentes">Componentes</a>
       <a href="#aplicaciones">Aplicaciones</a>
     </div>
-    <button class="cta">Solicitar demo</button>
+    <div class="actions">
+      <a class="repo" href="https://github.com/NLACE-COM/simon-thinks-ui" target="_blank" rel="noopener" aria-label="Repositorio en GitHub">
+        <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.6 7.6 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+        <span>Repositorio</span>
+      </a>
+      <a class="cta" href="https://github.com/NLACE-COM/simon-thinks-ui" target="_blank" rel="noopener">Solicitar demo</a>
+    </div>
   </div>
 </nav>
 
@@ -185,7 +252,11 @@
         <div><div class="v">4</div><div class="l">módulos</div></div>
       </div>
     </div>
-    <div class="visual"><img src="./assets/ref/iridescent.jpg" alt="Iridiscencia de marca"></div>
+    <div class="visual">
+      <img src="./assets/ref/iridescent.jpg" alt="Iridiscencia de marca">
+      <div class="scrim"></div>
+      <img class="mark" src="./assets/logo-vertical-white.svg" alt="SIMON THINKS">
+    </div>
   </div>
 </header>
 
@@ -201,17 +272,23 @@
     <div class="sub"><span class="t">Módulos</span><span class="ln"></span></div>
     <div id="demo-modules"></div>
 
-    <div class="sub"><span class="t">Logotipo &amp; símbolo</span><span class="ln"></span></div>
-    <div class="triptych">
-      <div class="tok-card" style="display:flex;align-items:center;justify-content:center;min-height:120px">
-        <img src="./assets/logo-horizontal-notagline.svg" alt="Logo horizontal" style="height:30px">
+    <div class="sub"><span class="t">Sistema de logotipo</span><span class="ln"></span></div>
+    <div class="logosys">
+      <div class="logo-feature">
+        <div class="glow"></div>
+        <img src="./assets/logo-vertical-white.svg" alt="Logo vertical SIMON THINKS">
+        <span class="cap">Vertical · uso principal sobre ink</span>
       </div>
-      <div class="tok-card" style="display:flex;align-items:center;justify-content:center;min-height:120px;background:var(--ink-950)">
-        <img src="./assets/logo-vertical-white.svg" alt="Logo vertical" style="height:64px">
-      </div>
-      <div class="tok-card" style="display:flex;align-items:center;justify-content:center;gap:var(--space-6);min-height:120px">
-        <img src="./assets/symbol-violet.svg" alt="Símbolo violeta" style="height:48px">
-        <img src="./assets/symbol.svg" alt="Símbolo" style="height:48px">
+      <div class="logo-side">
+        <div class="logo-tile"><span class="lab">Horizontal · color</span>
+          <img src="./assets/logo-horizontal.svg" alt="Logo horizontal color"></div>
+        <div class="logo-tile dark"><span class="lab">Horizontal · blanco</span>
+          <img src="./assets/logo-horizontal-white.svg" alt="Logo horizontal blanco"></div>
+        <div class="logo-tile vert"><span class="lab">Vertical · color</span>
+          <img src="./assets/logo-vertical.svg" alt="Logo vertical color"></div>
+        <div class="logo-tile"><span class="lab">Isotipo</span>
+          <img src="./assets/symbol-violet.svg" alt="Símbolo violeta">
+          <img src="./assets/symbol.svg" alt="Símbolo ink"></div>
       </div>
     </div>
   </div>
@@ -314,6 +391,7 @@
       <p>Los tokens y componentes compuestos en superficies reales: landing, producto, informe gobernado y formatos sociales.</p>
     </div>
 
+    <div class="sub"><span class="t">Capturas — landing &amp; producto</span><span class="ln"></span></div>
     <div class="apps">
       <div class="appcard">
         <div class="head"><div class="dots"><i></i><i></i><i></i></div><span class="nm">landing — hero</span></div>
@@ -324,17 +402,30 @@
         <div class="head"><div class="dots"><i></i><i></i><i></i></div><span class="nm">producto — superficie de decisión</span></div>
         <img class="shot center" src="./assets/showcase/app-product.png" alt="Superficie de decisión del producto" loading="lazy">
       </div>
+    </div>
 
-      <div class="apps-2">
-        <div class="appcard">
-          <div class="head"><div class="dots"><i></i><i></i><i></i></div><span class="nm">informe de decisión</span></div>
-          <img class="shot" src="./assets/showcase/app-report.png" alt="Informe de decisión gobernada" loading="lazy">
-        </div>
-        <div class="appcard">
-          <div class="head"><div class="dots"><i></i><i></i><i></i></div><span class="nm">social — formatos 1:1</span></div>
-          <img class="shot" src="./assets/showcase/app-social.png" alt="Formatos sociales 1:1" loading="lazy">
-        </div>
-      </div>
+    <div class="sub"><span class="t">En vivo — renderizado desde el kit</span><span class="ln"></span></div>
+    <div class="applead">
+      <span class="badge">Live</span>
+      <span class="ds">Cuatro superficies del design kit, embebidas tal cual se publican — sin capturas: informe gobernado, diagramas de nodos, integración para devs y formatos sociales.</span>
+    </div>
+    <div class="kitcol">
+      <figure class="kit">
+        <figcaption><span class="nm">Informe de decisión gobernada</span><span class="vp">guidelines/app-report</span></figcaption>
+        <div class="kit-stage"><iframe class="kit-frame" data-w="1320" data-h="1380" src="./guidelines/app-report.card.html" loading="lazy" title="Informe de decisión gobernada"></iframe></div>
+      </figure>
+      <figure class="kit">
+        <figcaption><span class="nm">Diagramas — flujo &amp; arquitectura</span><span class="vp">guidelines/diagram-flow</span></figcaption>
+        <div class="kit-stage"><iframe class="kit-frame" data-w="900" data-h="600" src="./guidelines/diagram-flow.card.html" loading="lazy" title="Diagramas de flujo y arquitectura"></iframe></div>
+      </figure>
+      <figure class="kit">
+        <figcaption><span class="nm">Integración para frameworks</span><span class="vp">guidelines/dev-integration</span></figcaption>
+        <div class="kit-stage"><iframe class="kit-frame" data-w="1240" data-h="880" src="./guidelines/dev-integration.card.html" loading="lazy" title="Integración para frameworks"></iframe></div>
+      </figure>
+      <figure class="kit">
+        <figcaption><span class="nm">Social — formatos 1:1</span><span class="vp">guidelines/app-social</span></figcaption>
+        <div class="kit-stage"><iframe class="kit-frame" data-w="1200" data-h="660" src="./guidelines/app-social.card.html" loading="lazy" title="Formatos sociales 1:1"></iframe></div>
+      </figure>
     </div>
   </div>
 </section>
@@ -347,6 +438,14 @@
         <img src="./assets/logo-vertical-white.svg" alt="SIMON THINKS">
         <p class="tag">El sistema que piensa con las organizaciones — gobernanza, contexto y evidencia en cada decisión.</p>
       </div>
+      <div class="flinks">
+        <span class="h">Recursos</span>
+        <a href="https://github.com/NLACE-COM/simon-thinks-ui" target="_blank" rel="noopener">
+          <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.6 7.6 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+          Repositorio
+        </a>
+        <a href="https://nlace-com.github.io/simon-thinks-ui/" target="_blank" rel="noopener">↗ Showcase en vivo</a>
+      </div>
       <div class="meta">
         SISTEMA DE DISEÑO · v2.4<br>
         Figtree · Schibsted Grotesk · JetBrains Mono<br>
@@ -356,7 +455,7 @@
     </div>
     <div class="bottom">
       <span>© 2026 SIMON THINKS</span>
-      <span>simonthinks.ai · claridad gráfica = claridad conceptual</span>
+      <span><a href="https://github.com/NLACE-COM/simon-thinks-ui" target="_blank" rel="noopener">github.com/NLACE-COM/simon-thinks-ui</a> · claridad gráfica = claridad conceptual</span>
     </div>
   </div>
 </footer>
@@ -439,6 +538,32 @@
   $('elevation').innerHTML = elev.map(([k,v])=>
     `<div class="elev-row"><span class="box" style="box-shadow:${css(v)}"></span><span class="k">shadow-${k}</span></div>`
   ).join('');
+})();
+</script>
+
+<!-- ===================== LIVE KIT EMBEDS — fit-to-width scaling ===================== -->
+<script>
+(function(){
+  function fit(f){
+    var w=+f.dataset.w, h=+f.dataset.h, stage=f.parentElement, sw=stage.clientWidth;
+    if(!sw||!w) return;
+    var s=sw/w;
+    f.style.width=w+'px'; f.style.height=h+'px';
+    f.style.transform='scale('+s+')';
+    stage.style.height=Math.round(h*s)+'px';
+  }
+  function fitAll(){ document.querySelectorAll('.kit-frame').forEach(fit); }
+  if('ResizeObserver' in window){
+    var ro=new ResizeObserver(function(entries){
+      entries.forEach(function(e){ var f=e.target.querySelector('.kit-frame'); if(f) fit(f); });
+    });
+    document.querySelectorAll('.kit-stage').forEach(function(s){ ro.observe(s); });
+  } else {
+    window.addEventListener('resize', fitAll);
+  }
+  window.addEventListener('load', fitAll);
+  document.addEventListener('DOMContentLoaded', fitAll);
+  fitAll();
 })();
 </script>
 
