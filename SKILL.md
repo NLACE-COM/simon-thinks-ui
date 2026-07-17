@@ -17,7 +17,7 @@ If creating visual artifacts (slides, mocks, throwaway prototypes), copy assets 
 of `assets/` and create static HTML files for the user to view — link `styles.css`
 for tokens/fonts. If working on production code, copy assets and read the rules here
 to become an expert in designing with this brand; mount components from
-`window.SIMONTHINKSDesignSystem_ae45ac` after loading the compiled bundle.
+`window.SIMONTHINKSDesignSystem_ec5f0a` after loading the compiled bundle.
 
 If the user invokes this skill without other guidance, ask what they want to build,
 ask a few clarifying questions, then act as an expert designer who outputs HTML

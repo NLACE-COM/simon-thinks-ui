@@ -48,7 +48,7 @@ If you are an agent generating artifacts or production code with this system:
 
 1. **Read order:** this `readme.md` → `styles.css` + `tokens/` → `integrations/README.md` → `components/` → `guidelines/*.card.html` (visual specimens).
 2. **Source of truth is `styles.css`** (it `@import`s all tokens). Link it in every artifact so fonts and `--tokens` resolve.
-3. **Mount React components** from the global the bundle defines: `window.SIMONTHINKSDesignSystem_ae45ac` (after loading `_ds_bundle.js`). For non-React output, use the `.stk-*` CSS classes from `integrations/stk-components.css`.
+3. **Mount React components** from the global the bundle defines: `window.SIMONTHINKSDesignSystem_ec5f0a` (after loading `_ds_bundle.js`). For non-React output, use the `.stk-*` CSS classes from `integrations/stk-components.css`.
 4. **No package manager.** Don't run `npm install`. Consume by linking files or copying the relevant `assets/`, `tokens/`, and CSS into the target project.
 5. **Media:** ship from `assets/media/optimized/` (light), not the originals. The high-res `assets/media/images|videos/` files live in **Git LFS** — run `git lfs pull` if you only see pointer files. See [Media bank](#media-bank).
 6. **Hold the brand rules:** Spanish-leading copy, English signature line; no emoji, no gradients, no glassmorphism; color is rationed (violet earns attention); module names are UPPERCASE. Full rules in [Design foundations](#design-foundations).
@@ -76,7 +76,7 @@ If you are an agent generating artifacts or production code with this system:
 <link rel="stylesheet" href="styles.css" />
 <script src="_ds_bundle.js"></script>
 <script>
-  const { Button, Card, Badge, ModuleNode } = window.SIMONTHINKSDesignSystem_ae45ac;
+  const { Button, Card, Badge, ModuleNode } = window.SIMONTHINKSDesignSystem_ec5f0a;
   // render with your React runtime
 </script>
 ```
@@ -130,8 +130,11 @@ simon-thinks-ui/
 │
 ├── assets/                    # Brand assets
 │   ├── logo-horizontal*.svg  logo-vertical*.svg  symbol*.svg   # + white/violet variants
+│   ├── logos-gobierno.svg / logos-gobierno-white.svg  # CORFO · Gob. de Chile · Min. Ciencia · ANID — lockup de respaldo para pies de página
 │   ├── icons/                 # HackerNoon Pixel Icon font (iconfont.woff2/woff/ttf)
 │   ├── ref/                   # Reference imagery
+│   │                          #   + Herbert Simon photos: assets/media/optimized/images/herbert-simon-{portrait,blackboard,office}-hero.webp
+│   │                          #     (each with a -duotone-hero.webp violet variant — use when talking about bounded rationality / the science)
 │   └── media/                 # ◀ Shared media bank — see its own README
 │       ├── images/            #   27 high-res originals (.jpg)   · Git LFS
 │       ├── videos/            #   16 high-res originals (.mp4)   · Git LFS
@@ -165,7 +168,7 @@ utilities and dark mode).
 | **Tokens** (required) | `styles.css` | Fonts + every `--token` + dark theme |
 | **Tailwind** | `integrations/tailwind.preset.js` (v3) · `integrations/tailwind.css` (v4) | Utility classes generated from tokens |
 | **CSS components** | `integrations/stk-components.css` | Ready `.stk-*` classes — any non-React stack |
-| **React components** | `_ds_bundle.js` → `window.SIMONTHINKSDesignSystem_ae45ac` | The full JSX component library |
+| **React components** | `_ds_bundle.js` → `window.SIMONTHINKSDesignSystem_ec5f0a` | The full JSX component library |
 
 `.stk-*` class reference (full list in [`integrations/README.md`](integrations/README.md)):
 
@@ -233,7 +236,7 @@ utilities and dark mode).
 
 ## Components
 
-Compiled into `_ds_bundle.js`, exposed on `window.SIMONTHINKSDesignSystem_ae45ac`.
+Compiled into `_ds_bundle.js`, exposed on `window.SIMONTHINKSDesignSystem_ec5f0a`.
 Source JSX in `components/`; visual specimens in `guidelines/*.card.html`.
 
 | Group | Components |
