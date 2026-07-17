@@ -13,7 +13,7 @@ in the design tool. The design-tool project is the **source of truth**.
 | `components/` | React components (`.jsx` + `.d.ts` + `.prompt.md`) grouped by family, each with a `*.card.html` showcase. |
 | `guidelines/` | Brand, color, type, spacing and application showcase cards (`*.card.html`). |
 | `integrations/` | Tailwind v3 preset, Tailwind v4 `@theme`, framework-agnostic `.stk-*` classes. |
-| `_ds_bundle.js` | **Generated** — compiled component bundle. Read components via `window.SIMONTHINKSDesignSystem_ae45ac`. |
+| `_ds_bundle.js` | **Generated** — compiled component bundle. Read components via `window.SIMONTHINKSDesignSystem_ec5f0a`. |
 | `_ds_manifest.json` | **Generated** — component / card / token manifest. |
 
 ## Consuming the components
@@ -24,7 +24,7 @@ in the design tool. The design-tool project is the **source of truth**.
 <link rel="stylesheet" href="styles.css">
 <script src="_ds_bundle.js"></script>
 <script>
-  const { Button, Icon, BarChart } = window.SIMONTHINKSDesignSystem_ae45ac;
+  const { Button, Icon, BarChart } = window.SIMONTHINKSDesignSystem_ec5f0a;
 </script>
 ```
 
