@@ -13,6 +13,7 @@ se marca la anterior como "Reemplazada" en la columna de estado.
 | Fecha | Flujo / pantalla | Decisión | Razón | Estado |
 |---|---|---|---|---|
 | _(ejemplo)_ 2026-07-29 | Confirmación: eliminar regla cognitiva | Título afirmativo sin pregunta: "Estás a punto de eliminar '{nombre}'" | Evitar fricción de duda; el título nunca pregunta, solo constata | Vigente |
+| 2026-07-31 | CORE — onboarding inicial (Admin, sin documentos cargados) | Título: "Carga los primeros documentos". Cuerpo: "CORE necesita los documentos de tu organización para empezar a estructurar y razonar sobre ellos. Como administrador, tú decides qué información entra a este espacio de conocimiento." CTA: "Cargar documentos". Helper: "Puedes agregar más documentos en cualquier momento." | Orientación funcional en vez de bienvenida efusiva (patrón de onboarding); nombra el rol de Admin explícitamente porque la responsabilidad de poblar la base de conocimiento es suya, no de cualquier usuario; el helper deja claro que la carga inicial no es un paso único e irreversible | Vigente |
 
 ## Cómo agregar una entrada
 
