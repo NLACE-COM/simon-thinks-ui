@@ -188,6 +188,8 @@ utilities and dark mode).
 
 ### Voice & copy
 
+> Decisiones concretas de wording (confirmaciones, microcopy, etc.) se registran en [copy-decisiones.md](copy-decisiones.md).
+
 - **Bilingual, Spanish-leading.** Body and product copy are primarily Spanish; the master tagline is English (*"Turn Knowledge into Decisions"*). ES for substance, EN for the signature line / module names.
 - **Tone:** calm, precise, intelligent — confident but never loud. One clear idea per surface.
 - **Casing:** sentence case for UI and prose. Module names are **UPPERCASE** (THINK, CORE, CUSTOM, LIGHT). Eyebrows/labels are uppercase mono with wide tracking.

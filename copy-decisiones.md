@@ -1,0 +1,32 @@
+# Registro de decisiones de UX Writing — SIMON THINKS
+
+Documento vivo. Cada vez que se fija una convención de copy o se decide un
+wording para un flujo (no un ajuste menor de redacción), se agrega una fila
+aquí. Este archivo es la fuente canónica de decisiones de texto para el
+producto — vive en el repo del design system para que quede versionado y
+visible para todo el equipo, en vez de guardarse solo en la copia local de
+quien lo escribió.
+
+No se borran filas: si una decisión se reemplaza, se agrega una fila nueva y
+se marca la anterior como "Reemplazada" en la columna de estado.
+
+| Fecha | Flujo / pantalla | Decisión | Razón | Estado |
+|---|---|---|---|---|
+| _(ejemplo)_ 2026-07-29 | Confirmación: eliminar regla cognitiva | Título afirmativo sin pregunta: "Estás a punto de eliminar '{nombre}'" | Evitar fricción de duda; el título nunca pregunta, solo constata | Vigente |
+
+## Cómo agregar una entrada
+
+1. Fecha (AAAA-MM-DD).
+2. Flujo o pantalla exacta donde aplica.
+3. La decisión en sí — texto final o la regla de wording fijada (no solo "se mejoró el copy").
+4. Razón breve — por qué esta variante y no otra.
+5. Estado: Vigente / Reemplazada / En prueba.
+
+## Pendientes de decidir
+
+_(vacío por ahora — se llena a medida que surjan casos sin resolver, ej. "¿Cómo se llama el CTA para aprobar una automatización sugerida por Simon?")_
+
+## Ver también
+
+- [Voice & copy](readme.md#voice--copy) en `readme.md` — tono de marca y reglas base.
+- Patrones de confirmaciones destructivas y microcopy — mantenidos en la skill `ux-writing-simon-thinks`.
