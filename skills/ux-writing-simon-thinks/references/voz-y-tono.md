@@ -1,6 +1,8 @@
 # Voz y tono — SIMON THINKS (capa UX writing)
 
-Fuente canónica del tono de marca: design system de Simon Thinks (`readme.md` del repo, resumido también en el skill `disenador-simon-thinks`). Este documento traduce ese tono a decisiones concretas de texto de interfaz. Si el design system cambia, esta capa debe revisarse.
+Este documento es **autosuficiente para tareas de UX writing** — no necesitas leer el resto de `readme.md` (colores, dark/light mode, tipografía, spacing, etc.) para escribir o revisar copy; nada de eso es relevante acá y solo consume contexto de más. Este archivo ya resume lo que aplica de la sección "Voice & copy" del design system.
+
+Solo si te falta algo que genuinamente no está cubierto aquí, consulta puntualmente la sección `readme.md#voice--copy` (no el archivo completo).
 
 ## Quién es Simon cuando habla
 

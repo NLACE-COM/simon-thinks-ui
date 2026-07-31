@@ -1,20 +1,21 @@
-# Registro de decisiones de UX Writing — SIMON THINKS
+# Registro de decisiones de UX Writing — SIMON THINKS (fallback)
 
-Documento vivo. Cada vez que se fija una convención o se decide un wording (no un ajuste menor de redacción), se agrega una fila aquí — en este archivo si el proyecto no tiene uno propio, o en el equivalente del repo si ya existe.
+Este archivo es un **respaldo temporal**, solo para cuando `copy-decisiones.md` del repo `simon-thinks-ui` no es alcanzable. En cuanto lo sea, el contenido que se agregue acá se traslada allá y este archivo vuelve a quedar vacío de decisiones reales.
 
-No se borran filas: si una decisión se reemplaza, se agrega una nueva fila y se marca la anterior como "Reemplazada" en la columna de estado.
+**Una fila por flujo/pantalla — no un log.** Cada fila es el estado *actual* de la decisión para ese flujo. Si cambia, se edita esa misma fila — no se agrega una fila nueva ni se marca nada como "Reemplazada". El repo real (`copy-decisiones.md`) usa git como historial; este archivo de respaldo no tiene esa ventaja, así que evita acumular filas viejas igual: sobrescribe.
 
 | Fecha | Flujo / pantalla | Decisión | Razón | Estado |
 |---|---|---|---|---|
 | _(ejemplo)_ 2026-07-29 | Confirmación: eliminar regla cognitiva | Título afirmativo sin pregunta: "Estás a punto de eliminar '{nombre}'" | Evitar fricción de duda; el título nunca pregunta, solo constata | Vigente |
 
-## Cómo agregar una entrada
+## Cómo agregar o actualizar una entrada
 
-1. Fecha (AAAA-MM-DD).
-2. Flujo o pantalla exacta donde aplica.
-3. La decisión en sí — texto final o la regla de wording fijada (no solo "se mejoró el copy").
-4. Razón breve — por qué esta variante y no otra.
-5. Estado: Vigente / Reemplazada / En prueba.
+1. Busca primero si el flujo ya tiene fila. Si existe, edítala — no dupliques.
+2. Fecha (AAAA-MM-DD).
+3. Flujo o pantalla exacta donde aplica.
+4. La decisión en sí — texto final o la regla de wording fijada (no solo "se mejoró el copy").
+5. Razón breve — por qué esta variante y no otra.
+6. Estado: Vigente / En prueba.
 
 ## Pendientes de decidir (agregar aquí lo que quede abierto en una sesión)
 

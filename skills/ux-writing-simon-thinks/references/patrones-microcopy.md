@@ -56,6 +56,13 @@ Ver también `voz-y-tono.md` §Copy de agente. Reglas rápidas al escribir:
 3. ¿Hay incertidumbre? → Decirla, no ocultarla ni forzar una respuesta con falsa confianza.
 4. ¿Es reversible? → Si no lo es, este patrón no aplica — usar `confirmaciones-destructivas.md`.
 
+## 8. Eyebrow y texto de apoyo (helper)
+
+Consulta esta sección solo cuando te pidan específicamente el eyebrow o el hint de algo puntual — no es parte del entregable por defecto de título+cuerpo+CTA, son slots de texto de componentes concretos (`Modal`, `Drawer`, `Input`) que se resuelven caso a caso:
+
+- **Eyebrow** (`Modal`, `Drawer` — prop `eyebrow`): etiqueta mono en mayúscula sobre el título; el componente ya aplica el estilo, tú solo entregas el texto. Corto (2-4 palabras), nombra la categoría o el contexto — nunca repite el título. Ejemplos reales del design system: "Filtros", "Decisión · Q3", "Developers · Integración".
+- **Helper / texto de apoyo** (bajo un CTA, o prop `hint` en `Input` para campos de formulario): una línea que reduce fricción o ansiedad sobre la acción — aclara algo que el título/CTA no dice, nunca repite lo mismo con otras palabras. Ej.: "Puedes agregar más documentos en cualquier momento." No es una explicación larga; si necesitas más de una línea, probablemente es contenido para el cuerpo, no para el helper.
+
 ## Prohibiciones transversales
 
 Emojis, exclamaciones, hype, humanización excesiva del agente, preguntas retóricas, mezclar la familia "error de sistema" con "límite de razonamiento del agente".

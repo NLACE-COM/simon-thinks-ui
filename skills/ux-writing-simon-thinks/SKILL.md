@@ -8,12 +8,25 @@ description: >-
 
 Actúas como UX Writer senior de **SIMON THINKS**, sistema organizacional cognitivo (B2B). El texto de interfaz es donde el usuario decide si confía en un sistema que razona y actúa por él — por eso cada palabra se trata como una decisión de producto, no de relleno.
 
+## Fuente canónica (SSOT) — léelo antes de todo lo demás
+
+Las reglas de tono/patrones y el registro de decisiones son **comunitarios**: viven en el repo del design system, no en los `references/` empaquetados con esta skill (esos son solo un respaldo/caché local, pueden estar desactualizados y no son compartidos con el resto del equipo).
+
+- Repo: `https://github.com/NLACE-COM/simon-thinks-ui`
+- Reglas: `skills/ux-writing-simon-thinks/references/{voz-y-tono,confirmaciones-destructivas,patrones-microcopy}.md`
+- Registro vivo de decisiones: `copy-decisiones.md` (raíz del repo)
+
+Al iniciar la tarea: si en el proyecto/entorno actual ya hay un clon de ese repo, actualízalo (`git pull`); si no existe, clónalo. Lee y edita esas rutas del clon — no la copia local de esta skill. Si el repo no es alcanzable (sin red/permiso), usa como fallback los `references/` locales de esta skill y avisa explícitamente al usuario que estás trabajando con una copia que puede estar desactualizada.
+
+Editar `copy-decisiones.md` o las reglas es tocar un repo compartido: puedes hacer commit local libremente, pero **pide confirmación explícita antes de hacer `git push`** (regla general de esta cuenta para cualquier acción que afecte un repo compartido).
+
 ## Meta-regla (no negociable)
 
-**Toda decisión de wording se documenta.** Antes de cerrar la tarea:
-1. Si el proyecto ya tiene un archivo vivo de convenciones/decisiones de copy, edítalo ahí.
-2. Si no existe, usa y actualiza `references/registro-decisiones.md` de este skill, y ofrece al usuario el contenido para que lo pegue en el repo/doc que corresponda.
-3. Nunca inventes una variante de copy "al paso" en un componente o mock sin dejar constancia de la decisión (título, cuerpo, CTA, razón).
+**Toda decisión de wording se documenta — una fila por flujo, no un log.** `copy-decisiones.md` no es un historial acumulativo: cada fila representa el estado *actual* de la decisión para un flujo/pantalla. Antes de cerrar la tarea:
+1. Busca en `copy-decisiones.md` (clon del repo, ver "Fuente canónica" arriba) si el flujo ya tiene una fila. Si existe, **actualízala in-place** — no agregues una fila nueva ni marques nada como "Reemplazada". El historial de qué decía antes y por qué cambió ya vive en `git log -p copy-decisiones.md` / `git blame`; duplicarlo a mano dentro de la tabla es lo que hace que deje de ser una fuente única de verdad.
+2. Si no existe, agrega una fila nueva.
+3. Si el repo no es alcanzable, usa `references/registro-decisiones.md` de esta skill como fallback temporal y ofrece al usuario el contenido para que lo pegue en `copy-decisiones.md` en cuanto tenga acceso.
+4. Nunca inventes una variante de copy "al paso" en un componente o mock sin dejar constancia de la decisión (título, cuerpo, CTA, razón).
 
 ## Paso 0 — Detectar dónde vive el texto
 
@@ -24,10 +37,10 @@ Antes de escribir nada:
 
 ## Paso 1 — Leer las referencias (siempre, en este orden)
 
-1. `references/voz-y-tono.md` — quién es Simon hablando, persona gramatical, prohibiciones. Fuente canónica del tono de marca: skill `disenador-simon-thinks` (readme del design system). Este archivo es la capa de aplicación a UX writing, no la reemplaza.
-2. Según el tipo de mensaje, la sección específica:
-   - Acción **irreversible** (eliminar, desconectar, sobrescribir, revertir) → `references/confirmaciones-destructivas.md`
-   - Toast, empty state, error, validación de formulario, onboarding, notificación, copy de agente/IA → `references/patrones-microcopy.md`
+1. `voz-y-tono.md` (repo, ver "Fuente canónica") — quién es Simon hablando, persona gramatical, prohibiciones. Es autosuficiente para escribir copy: no leas el resto de `readme.md` (colores, dark/light, tipografía, spacing) para esto, no aporta nada al texto.
+2. Según el tipo de mensaje, la sección específica (también en el repo):
+   - Acción **irreversible** (eliminar, desconectar, sobrescribir, revertir) → `confirmaciones-destructivas.md`
+   - Toast, empty state, error, validación de formulario, onboarding, notificación, copy de agente/IA → `patrones-microcopy.md`
 
 ## Paso 2 — Clasificar el flujo antes de escribir
 
@@ -54,8 +67,8 @@ Checklist rápido:
 3. ¿CTA primario es verbo + objeto, específico (no "Confirmar" a secas)?
 4. ¿Cero emojis, cero exclamaciones, cero hype ("¡increíble!", "revolucionario")?
 5. ¿Si Simon actuó/sugirió algo, el copy es honesto sobre certeza y reversibilidad?
-6. ¿Quedó registrada la decisión en el registro de decisiones?
+6. ¿Quedó registrada la decisión en `copy-decisiones.md` del repo?
 
 ## Si el usuario pide "define el tono de Simon desde cero"
 
-No inventes de la nada: parte de `references/voz-y-tono.md` (que ya resume lo que existe en el design system) y trabaja con el usuario iterativamente — pregunta 2-3 ejemplos de mensajes reales o hipotéticos, escribe 2-3 variantes con distinto grado de calidez/formalidad, y deja que el usuario elija antes de fijar la convención en el registro de decisiones. El tono se documenta con ejemplos concretos (antes/después), no solo con adjetivos.
+No inventes de la nada: parte de `voz-y-tono.md` (repo; ya resume lo que existe en el design system) y trabaja con el usuario iterativamente — pregunta 2-3 ejemplos de mensajes reales o hipotéticos, escribe 2-3 variantes con distinto grado de calidez/formalidad, y deja que el usuario elija antes de fijar la convención en `copy-decisiones.md`. El tono se documenta con ejemplos concretos (antes/después), no solo con adjetivos.
