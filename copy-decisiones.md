@@ -34,4 +34,8 @@ _(vacío por ahora — se llena a medida que surjan casos sin resolver, ej. "¿C
 ## Roadmap
 
 - **v1 (actual).** Este archivo es la única fuente editable ("SSOT") de decisiones de copy — comunitario, versionado en git, revisable vía PR. La skill `ux-writing-simon-thinks` clona/actualiza este repo en cada uso y lee/escribe aquí, no en una copia local de una sola persona.
-- **v2 (futuro, no implementado).** Exponer una vista de solo lectura de esta tabla en Excel/Google Sheets, generada automáticamente a partir de este archivo (ej. una GitHub Action en cada push a `main`). Esa vista nunca se edita directamente — todo cambio se hace acá y se propaga hacia afuera, para no terminar con una segunda fuente de verdad desincronizada.
+- **v2 (implementado).** Vista de solo consulta en Google Sheets: **["Simon Writing"](https://docs.google.com/spreadsheets/d/1OqcIqAXgtI9zjXaAiemGe5aHQ6yHLrz_WQWxkjH0Kmk/edit?usp=sharing)**.
+  - `scripts/copy-decisiones-to-csv.mjs` convierte esta tabla a `copy-decisiones.csv`.
+  - `.github/workflows/sync-copy-decisiones-csv.yml` regenera ese CSV en cada push a `main` que toque este archivo.
+  - El Sheet lee el CSV con `=IMPORTDATA("https://raw.githubusercontent.com/NLACE-COM/simon-thinks-ui/main/copy-decisiones.csv")`.
+  - El Sheet está compartido en modo **Lector** y el rango de la fórmula está protegido — nadie edita ahí. Todo cambio real se hace en este archivo, nunca en el Sheet.
