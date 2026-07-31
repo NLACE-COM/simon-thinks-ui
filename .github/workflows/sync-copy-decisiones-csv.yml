@@ -1,0 +1,31 @@
+name: Sync copy-decisiones.csv
+
+on:
+  push:
+    branches: [main]
+    paths: [copy-decisiones.md]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+
+      - name: Generar copy-decisiones.csv
+        run: node scripts/copy-decisiones-to-csv.mjs
+
+      - name: Commit si hay cambios
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add copy-decisiones.csv
+          git diff --staged --quiet || git commit -m "Sync copy-decisiones.csv [skip ci]"
+          git push
