@@ -41,6 +41,20 @@ El CTA lleva el conteo para que se sepa qué se recupera al salir del filtro.
 documento para una tabla de documentos, una lupa para una búsqueda, un embudo para un filtro.
 Sin humor forzado, sin ilustraciones "graciosas" descritas en el texto.
 
+## 2b. CTA de botones
+
+**Verbo + objeto, siempre.** *"Subir documento"*, *"Eliminar documento"*, *"Limpiar búsqueda"*,
+*"Crear proyecto"*. Un verbo suelto —*"Invitar"*, *"Guardar"*, *"Aceptar"*— obliga a mirar el título
+para saber sobre qué actúa.
+
+**Nombra lo que produce el botón, no la intención.** *"Generar reporte"*, no *"Consultar a Simon"*.
+*"Crear invitación"*, no *"Invitar"*.
+
+**El CTA no puede prometer algo que el sistema no hace.** *"Enviar invitación"* es falso mientras el
+flujo no envíe correo: crea una invitación pendiente que alguien tiene que hacer llegar. Cuando la
+capacidad exista, el CTA se actualiza — y esa condición se registra en `copy-decisiones.md` junto a
+la decisión, para que el cambio no dependa de que alguien lo recuerde.
+
 ## 3. Errores
 
 Distinguir tres familias — cada una tiene un tono distinto:
