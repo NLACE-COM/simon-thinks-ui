@@ -14,9 +14,32 @@ Regla: nombrar la acción concreta, no un estado emocional ("¡Listo!" está bie
 
 ## 2. Estados vacíos (empty states)
 
-- Explicar qué falta y qué acción resuelve el vacío — nunca solo "No hay datos".
-- Ej.: *"Aún no hay reglas cognitivas en este espacio. Crea la primera para que Simon empiece a razonar sobre tus decisiones."*
-- Sin humor forzado, sin ilustraciones "graciosas" descritas en el texto.
+**Son tres familias, no una.** Confundirlas produce copy absurdo: prometer una solución donde no hay
+problema, o dejar sin salida a quien se equivocó escribiendo.
+
+| Caso | Qué es | Cuerpo | CTA |
+|---|---|---|---|
+| **Vacío inicial** | falta algo | explica qué se gana al llenarlo | primario |
+| **Búsqueda sin resultados** | error de usuario recuperable | cómo corregir | de recuperación |
+| **Filtro sin resultados** | **respuesta válida** | **ninguno** | con el conteo que recupera |
+
+**Vacío inicial** — hay algo que hacer y conviene explicar por qué vale la pena.
+*"Todavía no hay documentos indexados. Simon solo responde sobre lo que está indexado. Sube el
+primer documento y queda disponible para consultas con su fuente citada."* → **Subir documento**
+
+**Búsqueda sin resultados** — el término va entre comillas angulares y el cuerpo dice cómo corregir.
+*"Ningún documento coincide con «hola». Revisa la escritura o prueba con menos palabras."*
+→ **Limpiar búsqueda**
+
+**Filtro sin resultados** — no es un vacío: es una respuesta. Cero documentos con error es buena
+noticia. No hay nada que resolver y una línea de relleno miente.
+*"Ningún documento con error."* — sin cuerpo — → **Ver los 10 documentos**
+
+El CTA lleva el conteo para que se sepa qué se recupera al salir del filtro.
+
+**Transversal a las tres:** el icono nombra lo que falta o lo que se filtra, no la acción — un
+documento para una tabla de documentos, una lupa para una búsqueda, un embudo para un filtro.
+Sin humor forzado, sin ilustraciones "graciosas" descritas en el texto.
 
 ## 3. Errores
 
