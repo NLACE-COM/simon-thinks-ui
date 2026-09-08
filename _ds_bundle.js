@@ -796,11 +796,14 @@ const CSS = `
 .st-card--flat{box-shadow:none}
 .st-card--raised{box-shadow:var(--shadow-md)}
 .st-card--interactive{cursor:pointer}
-.st-card--interactive:hover{border-color:var(--border-strong);box-shadow:var(--shadow-md);transform:translateY(-1px)}
+.st-card--interactive:hover{border-color:var(--border-strong);box-shadow:var(--shadow-lg);transform:translateY(-1px)}
 .st-card--accent{border-color:color-mix(in srgb,var(--violet-500) 30%,transparent);box-shadow:var(--shadow-glow)}
 .st-card__header{display:flex;align-items:center;justify-content:space-between;gap:var(--space-3);margin-bottom:var(--space-3)}
 .st-card__title{font-weight:var(--weight-semibold);font-size:var(--text-md);color:var(--text-primary);letter-spacing:var(--tracking-tight);margin:0}
 .st-card__sub{font-size:var(--text-sm);color:var(--text-secondary);margin:2px 0 0}
+.st-card__footer{display:flex;align-items:center;justify-content:flex-end;gap:var(--space-2);margin-top:auto;padding-top:var(--space-3)}
+.st-card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:var(--space-4);align-items:stretch}
+.st-card-grid>.st-card{height:100%}
 `;
 if (typeof document !== 'undefined' && !document.getElementById('st-card-css')) {
   const s = document.createElement('style');
@@ -813,6 +816,7 @@ function Card({
   title,
   subtitle,
   action,
+  footer,
   padded = true,
   elevation = 'flat',
   accent = false,
@@ -830,9 +834,20 @@ function Card({
     className: "st-card__title"
   }, title), subtitle && /*#__PURE__*/React.createElement("p", {
     className: "st-card__sub"
-  }, subtitle)), action), children);
+  }, subtitle)), action), children, footer && /*#__PURE__*/React.createElement("div", {
+    className: "st-card__footer"
+  }, footer));
 }
-Object.assign(__ds_scope, { Card });
+function CardGrid({
+  children,
+  className = '',
+  ...rest
+}) {
+  return /*#__PURE__*/React.createElement("div", _extends({
+    className: ['st-card-grid', className].filter(Boolean).join(' ')
+  }, rest), children);
+}
+Object.assign(__ds_scope, { Card, CardGrid });
 })(); } catch (e) { __ds_ns.__errors.push({ path: "components/core/Card.jsx", error: String((e && e.message) || e) }); }
 
 // components/core/IconButton.jsx
