@@ -574,7 +574,7 @@ const CSS = `
   font-family:var(--font-body);font-weight:var(--weight-semibold);
   background:var(--violet-100);color:var(--violet-700);
   border-radius:var(--radius-pill);overflow:hidden;user-select:none;
-  box-shadow:inset 0 0 0 1px rgba(11,11,15,.06);
+  box-shadow:var(--shadow-inset-hairline);
 }
 .st-avatar img{width:100%;height:100%;object-fit:cover;display:block}
 .st-avatar--sm{width:28px;height:28px;font-size:var(--text-2xs)}

@@ -28,10 +28,27 @@
                  0 8px 28px color-mix(in srgb, var(--violet-500) 22%, transparent);
   --focus-ring:  0 0 0 3px var(--ring-accent);
 
+  /* Glow sm — same family as --shadow-glow, smaller and without the 1px ring.
+     For the active item inside dense surfaces (nav items). */
+  --shadow-glow-sm: 0 4px 16px color-mix(in srgb, var(--violet-500) 35%, transparent);
+
+  /* Inset hairline — a border substitute, not elevation. Keeps a filled surface
+     (avatar, thumbnail, swatch) from bleeding into a light background. */
+  --shadow-inset-hairline: inset 0 0 0 1px rgba(11, 11, 15, 0.06);
+
   /* Motion — calm, purposeful. No bounce; cognition over spectacle. */
   --ease-out:     cubic-bezier(0.22, 0.61, 0.36, 1);  /* @kind other */
   --ease-in-out:  cubic-bezier(0.65, 0.05, 0.36, 1);  /* @kind other */
   --duration-fast:   120ms;  /* @kind other */
   --duration-base:   200ms;  /* @kind other */
   --duration-slow:   340ms;  /* @kind other */
+}
+
+/* ---- Dark surface scope: opt-in via [data-theme="dark"] ----
+   On a dark canvas a wide, soft shadow simply disappears. The dark ramp is
+   tighter and more opaque, with a negative spread so it reads as a lift rather
+   than a haze. Only --shadow-md is overridden today; add siblings as the dark
+   surfaces need them. */
+[data-theme="dark"] {
+  --shadow-md: 0 4px 12px -5px rgba(15, 14, 20, 0.45);
 }
