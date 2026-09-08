@@ -11,18 +11,21 @@ const CSS = `
 .st-card--flat{box-shadow:none}
 .st-card--raised{box-shadow:var(--shadow-md)}
 .st-card--interactive{cursor:pointer}
-.st-card--interactive:hover{border-color:var(--border-strong);box-shadow:var(--shadow-md);transform:translateY(-1px)}
+.st-card--interactive:hover{border-color:var(--border-strong);box-shadow:var(--shadow-lg);transform:translateY(-1px)}
 .st-card--accent{border-color:color-mix(in srgb,var(--violet-500) 30%,transparent);box-shadow:var(--shadow-glow)}
 .st-card__header{display:flex;align-items:center;justify-content:space-between;gap:var(--space-3);margin-bottom:var(--space-3)}
 .st-card__title{font-weight:var(--weight-semibold);font-size:var(--text-md);color:var(--text-primary);letter-spacing:var(--tracking-tight);margin:0}
 .st-card__sub{font-size:var(--text-sm);color:var(--text-secondary);margin:2px 0 0}
+.st-card__footer{display:flex;align-items:center;justify-content:flex-end;gap:var(--space-2);margin-top:auto;padding-top:var(--space-3)}
+.st-card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:var(--space-4);align-items:stretch}
+.st-card-grid>.st-card{height:100%}
 `;
 if (typeof document !== 'undefined' && !document.getElementById('st-card-css')) {
   const s = document.createElement('style'); s.id = 'st-card-css'; s.textContent = CSS; document.head.appendChild(s);
 }
 
 export function Card({
-  children, title, subtitle, action, padded = true,
+  children, title, subtitle, action, footer, padded = true,
   elevation = 'flat', accent = false, interactive = false,
   className = '', ...rest
 }) {
@@ -43,6 +46,18 @@ export function Card({
           {action}
         </div>
       )}
+      {children}
+      {footer && <div className="st-card__footer">{footer}</div>}
+    </div>
+  );
+}
+
+/** Grid container that keeps every Card in a row at the same height.
+ * Cards side by side must never have independent heights — the CTA ends up at a
+ * different offset per column and the information reads as disordered. */
+export function CardGrid({ children, className = '', ...rest }) {
+  return (
+    <div className={['st-card-grid', className].filter(Boolean).join(' ')} {...rest}>
       {children}
     </div>
   );
